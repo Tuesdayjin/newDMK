@@ -377,9 +377,8 @@ a {
   autoplay="autoplay"
   muted="muted"
   loop="loop">
-  <source src="${cpath}/resources/img/dmkimg/mainheader.mp4" type="video/mp4" />
+  <source src="http://localhost:8081/flask/resources/img/dmkimg/mainheader.mp4" type="video/mp4" />
 </video></div>
-
 		<div id="mainContent"></div>
 	</header>
 	<div>
