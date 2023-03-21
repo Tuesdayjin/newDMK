@@ -26,6 +26,7 @@
 <!--bootstrap-->
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
     <script type="text/javascript" src="${cpath}/resources/js/dmk.js"></script>
+    <link rel="stylesheet" href="${cpath}/resources/css/font.css">
     <script src="js/morph/bootstrap.min.js"></script>
 
 <!--google font-->
@@ -269,7 +270,12 @@ width : 100%;
   right: 15%;
   animation-delay: .3s;
 }
-
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
  </style>
 
 </head>
@@ -286,13 +292,15 @@ File bagDir = new File(bagPath);
 %>
 <button onclick="topFunction()" id="myBtn" class="btn btn-info to-top"
 		title="Go to top">TOP</button>
-	<div style="background-color: #393E46; position: sticky; top: 0; z-index: 9999;">
+
+	<div
+		style="background-color: #222831; position: sticky; top: 0; z-index: 9999;">
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid" style="width: 70%;">
 				<a class="navbar-brand" href="Main.do" style="color: #FFD369;">
-				<span>드라마켓</span>
+               <span  style="font-size:23px; font-family: 'Cafe24Danjunghae';">DRAMARKET</span>
 				<img src="${cpath}/resources/img/dmkimg/dmksim.png"width="20" height="24" style="margin-left:3px; margin-top:4px;" class="d-inline-block align-text-top">
-				</a>
+                  </a>
 				<div class="d-flex justify-content-end">
 					<button class="navbar-toggler" type="button"
 						data-bs-toggle="collapse" data-bs-target="#navbarColor02"
@@ -302,20 +310,20 @@ File bagDir = new File(bagPath);
 					</button>
 					<div class="collapse navbar-collapse" id="navbarColor02">
 
+
 						<ul class="navbar-nav me-auto">
-							<li class="nav-item"><a class="nav-link " href="Main.do">영상분석
+							<li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Home
 									<span class="visually-hidden">(current)</span>
 							</a></li>
-<li class="nav-item"><a class="nav-link" href="boardList.do">게시판</a>
-                     </li>
-							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="#">마이페이지</a>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="logout.do">로그아웃</a>
+							<c:if test="${!empty mvo}">
+								<li class="nav-item"><a class="nav-link" href="#" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="logout.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
 								</li>
 							</c:if>
 							<c:if test="${empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="login.do">로그인</a>
+								<li class="nav-item"><a class="nav-link" href="login.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Login</a>
 								</li>
 							</c:if>
 						</ul>

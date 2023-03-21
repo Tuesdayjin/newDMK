@@ -9,7 +9,7 @@
 <%@ page import="java.io.FileReader" %>
 <%@ page import="java.io.File" %>
     <c:set var="cpath" value="${pageContext.request.contextPath}"/>
-        
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +26,7 @@
 <!--bootstrap-->
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
     <script type="text/javascript" src="${cpath}/resources/js/dmk.js"></script>
+            <link rel="stylesheet" href="${cpath}/resources/css/font.css">
     <script src="js/morph/bootstrap.min.js"></script>
 
 <!--google font-->
@@ -86,8 +87,7 @@
 	src="http://localhost:8081/flask/full/build/js/i18n/amalia.js-message-en.js"></script>
 
 <!-- swiper -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <style>
 #captureImageButton {
   position: fixed;
@@ -332,6 +332,13 @@ width : 100%;
 .tooltip.my-tooltip .tooltip-arrow::before {
   border-bottom-color: #ffc107 !important;
 }
+
+@font-face {
+    font-family: 'Cafe24Danjunghae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
  </style>
 
 </head>
@@ -372,13 +379,14 @@ for(int i=0; i<nameArr.length; i++) {
 	<button onclick="topFunction()" id="myBtn" class="btn btn-info to-top"
 		title="Go to top">TOP</button>
 		
-	<div style="background-color: #393E46; position: sticky; top: 0; z-index: 9999;">
+	<div
+		style="background-color: #222831; position: sticky; top: 0; z-index: 9999;">
 		<nav class="navbar navbar-expand-lg">
 			<div class="container-fluid" style="width: 70%;">
 				<a class="navbar-brand" href="Main.do" style="color: #FFD369;">
-				<span>드라마켓</span>
+               <span  style="font-size:23px; font-family: 'Cafe24Danjunghae';">DRAMARKET</span>
 				<img src="${cpath}/resources/img/dmkimg/dmksim.png"width="20" height="24" style="margin-left:3px; margin-top:4px;" class="d-inline-block align-text-top">
-				</a>
+                  </a>
 				<div class="d-flex justify-content-end">
 					<button class="navbar-toggler" type="button"
 						data-bs-toggle="collapse" data-bs-target="#navbarColor02"
@@ -388,20 +396,20 @@ for(int i=0; i<nameArr.length; i++) {
 					</button>
 					<div class="collapse navbar-collapse" id="navbarColor02">
 
+
 						<ul class="navbar-nav me-auto">
-							<li class="nav-item"><a class="nav-link " href="Main.do">영상분석
+							<li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Home
 									<span class="visually-hidden">(current)</span>
 							</a></li>
-<li class="nav-item"><a class="nav-link" href="boardList.do">게시판</a>
-                     </li>
-							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="#">마이페이지</a>
 								</li>
-								<li class="nav-item"><a class="nav-link" href="logout.do">로그아웃</a>
+							<c:if test="${!empty mvo}">
+								<li class="nav-item"><a class="nav-link" href="#" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="logout.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
 								</li>
 							</c:if>
 							<c:if test="${empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="login.do">로그인</a>
+								<li class="nav-item"><a class="nav-link" href="login.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Login</a>
 								</li>
 							</c:if>
 						</ul>
@@ -590,7 +598,6 @@ for(int i=0; i<nameArr.length; i++) {
 				</div>
 				<div class="predictObj-box">
 				<%for(int i=0; i<nameArr.length; i++) {%>
-<!-- <div class="predict_content<%=i%> predict-card" style="display:none;"> -->
 <div class="predict_content<%=i%> predict-card"  style="display:none;">
 <%
 try {
@@ -740,7 +747,7 @@ try {
              success : function(data) {
                  console.log(data)                  
                  var html = "";
-                 for (var i = 0; i < 6; i++) {  
+                 for (var i = 0; i < 4; i++) {  
                      html += '<div class="search-objImg"><a href="' + data['link'][i] + '" target="_blank"><img src="' + data['image'][i] + '"></a></div>';
                  }
                  $(".search-title").show();
@@ -849,7 +856,7 @@ try {
     </div>
 </div>
 </footer>
-
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7Rdu7Bf4zVdcp4Xh3Pm4LI+J2SvD0oda3x3tvLAuta3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>

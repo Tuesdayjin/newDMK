@@ -126,7 +126,7 @@ color : #FFD369;
                   <div class="collapse navbar-collapse" id="navbarColor02">
                       
                       <ul class="navbar-nav me-auto">
-							<li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Main
+							<li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Home
 									<span class="visually-hidden">(current)</span>
 							</a></li>
 								<li class="nav-item"><a class="nav-link" href="boardList.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Board</a>
