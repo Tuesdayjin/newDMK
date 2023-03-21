@@ -108,6 +108,9 @@ margin-bottom : 5px;
   flex-direction: column;
   align-items: center;
 }
+.card {
+   overflow-y: auto;
+}
 
 #loginCard a {
   color: #393E46;
@@ -184,7 +187,7 @@ margin-bottom : 5px;
                                  </div>
                                  </div>
                               </form>
-                              		<div style="width:40%; height:100%">
+                              		
 										<form id="signup-form" style="display: none;" enctype="multipart/form-data">
 											<div class="form-group">
 												<label for="id">아이디</label> 
@@ -239,7 +242,7 @@ margin-bottom : 5px;
 													돌아가기</a>
 											</div>
 										</form>
-										</div>
+										
 
                            </div>
                         </div>
