@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="kr.smhrd.mapper.Mapper">
+
+	<select id="memberList" resultType="kr.smhrd.entity.t_member">
+	select * from t_member
+	</select>
+	
+	<select id="boardList" resultType="kr.smhrd.entity.t_board" parameterType="kr.smhrd.entity.Criteria">
+		select * from t_board order by indate desc
+		limit #{pageStart}, #{perPageNum}
+	</select>
+
+</mapper>

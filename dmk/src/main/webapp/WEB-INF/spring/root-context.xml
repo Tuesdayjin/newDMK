@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	
+		<!-- 1. HikariCP API , id는 보통 소문자 시작으로-->
+		<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value ="com.mysql.cj.jdbc.Driver"/>
+		<property name="jdbcUrl" value="jdbc:mysql://project-db-stu.ddns.net:3307/dmk"/>
+		<property name="username" value="dmk"/>
+		<property name="password" value="dmk"/>
+		</bean>
+		
+		<!-- 2. 데이터소스에 컨피그 참조(데이터 소스-> 커넥션 풀) -->	
+		<bean id="DataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="hikariConfig"/>
+		</bean>
+	
+		<!-- 3. mybatis-spring API -->
+		<bean class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="DataSource"/>
+		</bean>
+	
+		<!-- 4. 인터페이스와 연결작업 (+namespace 스키마 추가) -->
+		<mybatis-spring:scan base-package="kr.smhrd.mapper"/>
+		
+	
+		
+		
+</beans>
