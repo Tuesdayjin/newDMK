@@ -70,4 +70,7 @@ public interface Mapper {
 	@Select("select count(*) from t_board")
 	public int totalCount();
 	
+	@Select("SELECT * FROM t_board WHERE title LIKE CONCAT('%', #{search}, '%')")
+	public List<t_board> boardSearch(String search);
+	
 }

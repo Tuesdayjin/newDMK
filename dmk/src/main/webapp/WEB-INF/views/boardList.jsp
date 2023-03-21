@@ -213,9 +213,9 @@ color : #FFD369;
                   <div class="col-6">
                   </div>
                   <div class="col-2">
-                  <form>
+                  <form action="boardSearch.do">
                   <div class="row">
-                  <input type="text">
+                  <input type="text" name=searchWord>
                   <button type="submit" class="btn btn-sm">검색</button>
                   </div>
                   </form>

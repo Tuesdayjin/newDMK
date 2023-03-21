@@ -229,7 +229,13 @@ public class BoardController { //DAO 대신 mapper 호출
         return message;
     }
     
+	@RequestMapping("/boardSearch.do") 
+	public String boardSearch(@RequestParam("searchWord") String search, Model model) {
+		
+		List<t_board> list = mapper.boardSearch(search);
+		model.addAttribute("list", list);
+		
+		return "boardList";
+	}
     
-    
-
 }
