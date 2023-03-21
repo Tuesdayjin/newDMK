@@ -150,7 +150,7 @@ color : #FFD369;
 							</a></li>
 								</li>
 							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="#" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
+								<li class="nav-item"><a class="nav-link" href="myPage.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="logout.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
 								</li>

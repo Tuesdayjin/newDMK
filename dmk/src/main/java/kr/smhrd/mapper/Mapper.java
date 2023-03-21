@@ -73,4 +73,6 @@ public interface Mapper {
 	@Select("SELECT * FROM t_board WHERE title LIKE CONCAT('%', #{search}, '%')")
 	public List<t_board> boardSearch(String search);
 	
+	@Select("SELECT * FROM t_board WHERE id=#{myId}")
+	public List<t_board> myPage(String myId);
 }

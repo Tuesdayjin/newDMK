@@ -165,4 +165,14 @@ public class MainController {
 		return "result";
 	}
 	
+	@RequestMapping("/myPage.do")
+	public String myPage(HttpSession session, Model model) {
+		t_member mvo = (t_member) session.getAttribute("mvo");
+		String myId = mvo.getId();
+		List<t_board> list = mapper.myPage(myId);
+		model.addAttribute("list", list);
+		
+		return "myPage";
+	}
+	
 }
