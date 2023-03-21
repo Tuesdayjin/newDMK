@@ -53,6 +53,11 @@ public class MainController {
 		return "test";
 	}
 	
+	@RequestMapping("/mypage.do")//mypage
+	public String mypage() {
+		return "myPage";
+	}
+	
 	
 	@PostMapping("/uploadFile.do")
 	public String upload(@RequestParam("uploadFile") MultipartFile file, RedirectAttributes rttr) {

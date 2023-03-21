@@ -75,4 +75,8 @@ public interface Mapper {
 	
 	@Select("SELECT * FROM t_board WHERE id=#{myId}")
 	public List<t_board> myPage(String myId);
+	
+	//게시글 삭제
+	@Delete("delete from t_board where board_num=#{board_num}")
+	public void remove(long board_num);
 }

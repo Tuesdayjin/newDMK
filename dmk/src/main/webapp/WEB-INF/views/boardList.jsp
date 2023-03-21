@@ -48,6 +48,194 @@
 	rel="stylesheet">
 	
 	<style>
+	
+/*글쓰기버튼*/
+.col-2{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.col-2 .w-btn {
+  margin-right: 10px;
+}
+
+.write-btn {
+  width: 50px;
+  height: 40px;
+  border: 1px solid #FFD369;
+  background: #FFD369;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  transition: width 0.2s ease-in-out;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.writeadd-btn:hover {
+  width: 120px;
+}
+
+.writeadd-btn::before,
+.writeadd-btn::after {
+  transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 10px;
+  top: calc(50% - 2px);
+  background: white;
+}
+
+.writeadd-btn::after {
+  right: 14px;
+  overflow: hidden;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.writeadd-btn::before {
+  left: 14px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.write-btn:focus {
+  outline: none;
+}
+
+.btn-txt {
+  opacity: 0;
+  transition: opacity 0.2s;
+  font-weight : 300;
+}
+
+.writeadd-btn:hover::before,
+.writeadd-btn:hover::after {
+  width: 4px;
+  border-radius: 2px;
+}
+
+.writeadd-btn:hover .btn-txt {
+  opacity: 1;
+}
+
+.add-icon::after,
+.add-icon::before {
+  transition: all 0.2s ease-in-out;
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 2px;
+  top: calc(50% - 10px);
+  background: white;
+  overflow: hidden;
+}
+
+.add-icon::before {
+  left: 22px;
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.add-icon::after {
+  right: 22px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.writeadd-btn:hover .add-icon::before {
+  left: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.writeadd-btn:hover .add-icon::after {
+  right: 15px;
+  height: 4px;
+  top: calc(50% - 2px);
+}
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+/* styling of whole input container */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 300px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #FFD369;
+  --border-radius: 30px;
+  --after-border-radius: 1px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease;
+  background: var(--input-bg,#fff);
+}
+/* styling of Input */
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+/* styling of animated border */
+.form:before {
+  content: "";
+  position: absolute;
+  background: var(--border-color);
+  transform: scaleX(0);
+  transform-origin: center;
+  width: 100%;
+  height: var(--border-height);
+  left: 0;
+  bottom: 0;
+  border-radius: 1px;
+  transition: transform var(--timing) ease;
+}
+/* Hover on Input */
+.form:focus-within {
+  border-radius: var(--after-border-radius);
+}
+
+input:focus {
+  outline: none;
+}
+/* here is code of animated border */
+.form:focus-within:before {
+  transform: scale(1);
+}
+/* styling of close button */
+/* == you can click the close button to remove text == */
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+/* close button shown when typing */
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+/* sizing svg icons */
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+	
 	   .myswitch{
      display: flex;
   flex-direction: column;
@@ -120,7 +308,12 @@ font-size : 60px;
 font-weight : 700;
 color : #FFD369;
 }
-      
+.boardInputGroup{
+margin-bottom : 40px;
+padding : 10px;
+border-radius : 5px;
+background-color : rgba(238, 238, 238, 0.8); 
+}     
       </style>
 </head>
 <body>
@@ -202,31 +395,38 @@ color : #FFD369;
       <div class="container px-5 my-5">
          <div class="container">
             <div class="container text-center">
-               <div class="row" id="writebtn-row">
+               <div class="row boardInputGroup">
                <c:if test="${!empty mvo}">
-                  <div class="col-2 myswitch">
-<div class="form-check form-switch d-inline-flex">
-  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-  <label class="form-check-label" for="flexSwitchCheckDefault">내글보기</label>
-</div>
-                  </div>
-                  <div class="col-6">
-                  </div>
                   <div class="col-2">
-                  <form action="boardSearch.do">
-                  <div class="row">
+                  </div>
+                  </c:if>
+                  <div class="col-8" style="  display: flex;  justify-content: center;  align-items: center;">
+  <form class="form" action="boardSearch.do" style="display: flex;">
+      <button type="submit">
+          <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
+              <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+      </button>
+      <input name=searchWord class="input" placeholder="검색어를 입력하세요" type="text">
+      <button class="reset" type="reset">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+      </button>
+  </form>
+                 <!--  <form action="boardSearch.do">
                   <input type="text" name=searchWord>
                   <button type="submit" class="btn btn-sm">검색</button>
-                  </div>
-                  </form>
+                  </form> -->
                   </div>
                   <div class="col-2">
-                  <div class="writebtn-box">
-                           <button type="button" class="btn btn-primary btn-sm"
-                              id="writebtn">
-                              <i class="bi bi-pencil">_</i>글쓰기
-                           </button>
-                        </div>
+                  <c:if test="${!empty mvo}">
+<div class="w-btn">
+<button id="writebtn" class="write-btn writeadd-btn">
+    <div class="add-icon"></div>
+    <div class="btn-txt">글쓰기</div>
+</button>
+</div>
                   </div>
                   </c:if>
                </div>
