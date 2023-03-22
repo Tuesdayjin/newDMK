@@ -74,7 +74,7 @@ public interface Mapper {
 	@Select("SELECT * FROM t_board WHERE title LIKE CONCAT('%', #{search}, '%')")
 	public List<t_board> boardSearch(String search);
 	
-	@Select("SELECT * FROM t_board WHERE id=#{myId}")
+	@Select("SELECT * FROM t_board WHERE id=#{myId} order by indate desc")
 	public List<t_board> myPage(String myId);
 	
 	//게시글 삭제
@@ -85,7 +85,7 @@ public interface Mapper {
 	@Insert("insert into t_history (id, h_indate, h_kind, h_value, h_comment) values (#{id}, sysdate(), #{h_kind}, #{h_value}, #{h_comment})")
 	public void historyInsert(t_history vo);
 	
-	@Select("SELECT * FROM t_history WHERE id=#{myId}")
+	@Select("SELECT * FROM t_history WHERE id=#{myId} order by h_indate desc")
 	public List<t_history> myHistory(String myId);
 	
 }
