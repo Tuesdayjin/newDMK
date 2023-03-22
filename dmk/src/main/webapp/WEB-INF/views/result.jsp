@@ -434,6 +434,14 @@ for(int i=0; i<nameArr.length; i++) {
 </svg>
 </button>
 </form>
+<c:if test="${!empty mvo}">
+<form action="historyInsert.do">
+<input type="hidden" name="h_kind" value="비디오">
+<input type="hidden" name="h_value" value="${fileName}">
+<input type="text" name="h_comment" value="" placeholder="코멘트를 남겨주세요" required>
+<input type="submit" value="찜하기">
+</form>
+</c:if>
 		<div class="content">
 				<div class="player-Bigbox">
 				<div class="player-box">

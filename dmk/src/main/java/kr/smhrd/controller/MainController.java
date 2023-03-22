@@ -25,6 +25,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import kr.smhrd.entity.t_board;
+import kr.smhrd.entity.t_history;
 import kr.smhrd.entity.t_member;
 import kr.smhrd.mapper.Mapper;
 import kr.smhrd.util.common_util;
@@ -174,8 +175,12 @@ public class MainController {
 	public String myPage(HttpSession session, Model model) {
 		t_member mvo = (t_member) session.getAttribute("mvo");
 		String myId = mvo.getId();
+		
 		List<t_board> list = mapper.myPage(myId);
+		List<t_history> h_list = mapper.myHistory(myId);
+		
 		model.addAttribute("list", list);
+		model.addAttribute("h_list", h_list);
 		
 		return "myPage";
 	}

@@ -332,7 +332,14 @@ File bagDir = new File(bagPath);
 			</div>
 		</nav>
 	</div>
-
+<c:if test="${!empty mvo}">
+<form action="historyInsert.do">
+<input type="hidden" name="h_kind" value="이미지">
+<input type="hidden" name="h_value" value="${fileName}">
+<input type="text" name="h_comment" value="" placeholder="코멘트를 남겨주세요" required>
+<input type="submit" value="찜하기">
+</form>
+</c:if>
 <div class="container">
 		<div class="header">
 		</div>

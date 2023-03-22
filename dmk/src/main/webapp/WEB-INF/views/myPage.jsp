@@ -257,6 +257,44 @@ color : #FFD369;
   </div>
 </div>
 </div>
+<div class="col-9">
+<div class="card myBoard-card" style="width: 100%; background-color : rgba(238, 238, 238,0.8);">
+<div class="card-header">
+<h4>내 히스토리</h4>
+</div>
+  <div class="card-body">
+  <table class="table ">
+  <thead>
+    <tr>
+      <th scope="col">날짜</th>
+      <th scope="col">구분</th>
+      <th scope="col">설명</th>
+    </tr>
+  </thead>
+  <tbody>
+    <c:forEach var="history_vo" items="${h_list}">
+    <tr>
+      <td>
+      <p style="font-size: 16px; font-family: 'NanumSquare';"><fmt:formatDate value="${history_vo.h_indate}"  pattern="yyyy-MM-dd HH시 mm분" /></p>
+      </td>
+      <td>
+      <p style="font-size: 16px; font-family: 'NanumSquare';">${history_vo.h_kind}</p>
+      </td>
+      <td>
+      <c:if test="${history_vo.h_kind == '비디오'}">
+      <a href="result.do?fileName=${history_vo.h_value}"><p style="font-size: 16px; font-family: 'NanumSquare';">${history_vo.h_comment}</p></a>
+      </c:if>
+      <c:if test="${history_vo.h_kind == '이미지'}">
+      <a href="imgResult.do?fileName=${history_vo.h_value}"><p style="font-size: 16px; font-family: 'NanumSquare';">${history_vo.h_comment}</p></a>
+      </c:if>
+      </td>
+    </tr>
+    </c:forEach>
+  </tbody>
+</table>
+  </div>
+</div>
+</div>
 </div><!-- end row -->
 </div><!-- end container -->
 </section>

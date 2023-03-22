@@ -11,6 +11,7 @@ import org.apache.ibatis.annotations.Update;
 import kr.smhrd.entity.Criteria;
 import kr.smhrd.entity.t_board;
 import kr.smhrd.entity.t_comment;
+import kr.smhrd.entity.t_history;
 import kr.smhrd.entity.t_member;
 
 public interface Mapper {
@@ -79,4 +80,12 @@ public interface Mapper {
 	//게시글 삭제
 	@Delete("delete from t_board where board_num=#{board_num}")
 	public void remove(long board_num);
+	
+	// 히스토리
+	@Insert("insert into t_history (id, h_indate, h_kind, h_value, h_comment) values (#{id}, sysdate(), #{h_kind}, #{h_value}, #{h_comment})")
+	public void historyInsert(t_history vo);
+	
+	@Select("SELECT * FROM t_history WHERE id=#{myId}")
+	public List<t_history> myHistory(String myId);
+	
 }
