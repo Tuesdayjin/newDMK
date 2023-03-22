@@ -587,6 +587,7 @@ $(window).scroll(function() {
             	  } else {
             	    page++;
             	  }
+            	  $('#scrollContainer').masonry(); // Masonry 업데이트
             	}
         });
     }
