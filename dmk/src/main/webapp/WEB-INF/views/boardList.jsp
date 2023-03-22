@@ -452,7 +452,7 @@ background-color : rgba(238, 238, 238, 0.8);
                            <fmt:formatDate value="${board_vo.indate}" pattern="yyyyMMdd"
                               var="writeDate" />
                            <c:if test="${nowDate == writeDate}">
-                              <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div>
+                              <div class="badge bg-primary bg-gradient rounded-pill mb-2">New</div>
                            </c:if>
                            <a class="text-decoration-none link-dark stretched-link"
                               href="boardContent.do?num=${board_vo.num}"><h5
