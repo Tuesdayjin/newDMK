@@ -31,6 +31,15 @@
  <!-- Bootstrap Icons library -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <style>
+
+.mypageThum{
+width : 100px;
+height : 100px;
+}
+.mypageThum img{
+width : 100%;
+height : 100%;
+}
 .grabox{
  position: absolute;
   z-index: 1;
@@ -71,7 +80,6 @@ header {
 }
 
 .titleborderbox{
-
 margin-left:18%;
 margin-top:5%;
    width:100%;
@@ -206,7 +214,7 @@ color : #FFD369;
   <table class="table ">
   <thead>
     <tr>
-      <th scope="col">글번호</th>
+      <th scope="col">미리보기</th>
       <th scope="col">제목</th>
       <th scope="col">조회수</th>
       <th scope="col">작성일</th>
@@ -216,7 +224,14 @@ color : #FFD369;
     <c:forEach var="board_vo" items="${list}">
     <tr>
       <td>
-      <a class="text-decoration-none link-dark" href="boardContent.do?num=${board_vo.num}"><p style="font-size: 16px; font-family: 'NanumSquare';">${board_vo.num}</p></a>
+      <a class="text-decoration-none link-dark" href="boardContent.do?num=${board_vo.num}">
+       <c:if test="${!empty board_vo.img_name}">
+      <div class="mypageThum">
+       <!-- 이미지 있을때만 -->
+        <img class="card-img-top" src="http://localhost:8081/boardimg/thumb_${board_vo.img_name}" alt="Post 1" />        
+      </div>
+        </c:if>
+      </a>
       </td>
       <td>
       <a class="text-decoration-none link-dark" href="boardContent.do?num=${board_vo.num}"><p style="font-size: 16px; font-family: 'NanumSquare';">${board_vo.title}</p></a>
@@ -231,7 +246,8 @@ color : #FFD369;
       <!-- <a href="boardContent.do?num=${board_vo.num}" role="button"><p style="font-size: 16px; font-family: 'NanumSquare';">삭제</p></a> -->
       <form id="frm">
       <input type="hidden" id="boardNum" value="${board_vo.num}"/>
-      <button id="delBoard" data-btn="remove" class="btn btn-sm" style="color=black; background-color:#EEEEEE;">X</button>
+      <button id="delBoard" data-btn="remove" class="btn btn-sm" style="color=black; background-color:#EEEEEE;">X
+      </button>
       </form>
       </td>
     </tr>
@@ -273,7 +289,7 @@ $(document).ready(function(){
     $("#delBoard").on("click", function(e){
         var btn = $(this).data("btn");
         if(btn == "remove") {
-            formData.attr("action", '${cpath}/boardDelete.do');
+            formData.attr("action", 'boardDelete.do');
             formData.attr("method", "get");
         }
         formData.submit();
