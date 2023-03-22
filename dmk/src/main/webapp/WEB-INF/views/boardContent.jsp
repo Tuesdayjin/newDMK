@@ -40,6 +40,19 @@
   height: 100%;
   width: 100%;
 }
+    .titleRow p {
+        display: inline-block;
+        margin-right: 10px;
+    }
+  .titleBoarderBox {
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+  }
+  .subTitleRow {
+    margin-top: -15px;
+  }
 header {
   position: relative;
   z-index: 2;
@@ -150,20 +163,16 @@ color : #FFD369;
 <!-- Header-->
 <header class="py-5" style="background-color: #393E46; height:350px;">
 <div class="grabox">
-<div class="titleborderbox">
-  <div class="row" style="width:auto;">
-    <div class="col-sm-8">
-		<span class="shopping" style="color:#EEEEEE;">Shopping </span>
-		<span class="inthe" style="color:#EEEEEE;">in the </span>
-		<span class="scene" style="color:#EEEEEE;">Scene</span>
-	</div>
-  </div>
-  <div class="row"  style="width:auto;">
-    <div class="col-sm">
-		<span style="font-size:20px; font-family: 'NanumSquare'; font-weight:300; color:#FFFFFF;">영상 속 그 제품, 스쳐가지 마세요</span>
-    </div>
-  </div>
-  </div>
+<div class="titleBoarderBox">
+<div class="titleRow">
+<p class="shopping" style="color:#EEEEEE;">Shopping </p>
+		<p class="inthe" style="color:#EEEEEE;">in the </p>
+		<p class="scene" style="color:#EEEEEE;">Scene</p>
+<div class="subTitleRow">
+<span style="font-size:20px; font-family: 'NanumSquare'; font-weight:300; color:#FFFFFF;">영상 속 그 제품, 스쳐가지 마세요</span>
+</div>
+</div>
+</div>
 </div>
 <img class="headerimg" src="${cpath}/resources/img/dmkimg/Drama.png">
     <div class="container px-5">

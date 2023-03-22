@@ -31,7 +31,19 @@
  <!-- Bootstrap Icons library -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <style>
-
+    .titleRow p {
+        display: inline-block;
+        margin-right: 10px;
+    }
+  .titleBoarderBox {
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+  }
+  .subTitleRow {
+    margin-top: -15px;
+  }
 .mypageThum{
 width : 100px;
 height : 100px;
@@ -111,6 +123,13 @@ font-weight : 700;
 color : #FFD369;
 }
 
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 </style>
 
 </head>
@@ -157,20 +176,16 @@ color : #FFD369;
 <!-- Header-->
 <header class="py-5" style="background-color: #393E46; height:350px;">
 <div class="grabox">
-<div class="titleborderbox">
-  <div class="row" style="width:auto;">
-    <div class="col-sm-8">
-		<span class="shopping" style="color:#EEEEEE;">Shopping </span>
-		<span class="inthe" style="color:#EEEEEE;">in the </span>
-		<span class="scene" style="color:#EEEEEE;">Scene</span>
-	</div>
-  </div>
-  <div class="row"  style="width:auto;">
-    <div class="col-sm">
-		<span style="font-size:20px; font-family: 'NanumSquare'; font-weight:300; color:#FFFFFF;">영상 속 그 제품, 스쳐가지 마세요</span>
-    </div>
-  </div>
-  </div>
+<div class="titleBoarderBox">
+<div class="titleRow">
+<p class="shopping" style="color:#EEEEEE;">Shopping </p>
+		<p class="inthe" style="color:#EEEEEE;">in the </p>
+		<p class="scene" style="color:#EEEEEE;">Scene</p>
+<div class="subTitleRow">
+<span style="font-size:20px; font-family: 'NanumSquare'; font-weight:300; color:#FFFFFF;">영상 속 그 제품, 스쳐가지 마세요</span>
+</div>
+</div>
+</div>
 </div>
 <img class="headerimg" src="${cpath}/resources/img/dmkimg/Drama.png">
     <div class="container px-5">
@@ -191,12 +206,17 @@ color : #FFD369;
 <div class="col-3">
 
 <div class="card profile-card" style="width: 18rem; background-color : rgba(238, 238, 238,0.8);">
-   <img class="rounded-circle me-3"
+   <!-- <img class="rounded-circle me-3"
                                     src="http://localhost:8081/profile/profile_${board_vo.profile_name}" alt="..."
-                                    style="width:45px; height:45px;" />
+                                    style="width:45px; height:45px;" /> -->
   <div class="card-body">
-    <h5 class="card-title">${board_vo.nick}</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  <div class="profileImg" style="width:100px; height:100px;">
+ <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+</svg>
+  </div>
+    <h5 class="card-title" style="margin-top : 20px; margin-left:20px;">닉네임</h5>
   </div>
   <div class="card-footer">
     <a href="#" class="card-link">내 정보 수정</a>
@@ -257,7 +277,7 @@ color : #FFD369;
   </div>
 </div>
 </div>
-<div class="col-9">
+<div class="col">
 <div class="card myBoard-card" style="width: 100%; background-color : rgba(238, 238, 238,0.8);">
 <div class="card-header">
 <h4>내 히스토리</h4>
