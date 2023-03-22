@@ -573,19 +573,20 @@ function topFunction() {
 </script>
 <script>
 var loading = false;
-var page = 2; // 초기 페이지 값
+var page = 1; // 초기 페이지 값
 
 $(window).scroll(function() {
     var bottomOffset = $(document).height() - $(window).height() - $(window).scrollTop();
 
     if (bottomOffset <= 0 && !loading) {
         loading = true;
+        var nextPage = page + 1;
         $.ajax({
             url: 'boardList.do',
             type: 'GET',
             dataType: 'html',
             data: {
-                page: page // 현재 페이지 전달
+                page: nextPage // 현재 페이지 전달
             },
             success: function(data) {
             	  var $newItems = $(data).find('#scrollContainer > div');
@@ -594,7 +595,7 @@ $(window).scroll(function() {
             	  if ($newItems.length === 0) {
             	    $(window).off('scroll');
             	  } else {
-            	    page++;
+            		  page = nextPage;
             	  }
             	  $('#scrollContainer').masonry(); // Masonry 업데이트
             	}
