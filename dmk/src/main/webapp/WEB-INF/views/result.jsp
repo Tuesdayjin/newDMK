@@ -89,6 +89,80 @@
 <!-- swiper -->
 <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 <style>
+.save-container {
+  position: relative;
+  display: flex;
+  height: 2.8rem;
+  width: 100%;
+  min-width: 200px;
+  max-width: 250px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, .05);
+}
+
+.save-container input {
+  height: 100%;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid  rgb(176 190 197);
+  background-color: transparent;
+  padding: 0.625rem 70px 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: rgb(69 90 100);
+  outline: none;
+  transition: all .15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.save-container input:focus {
+  border: 1px solid rgb(255, 211, 105);
+}
+
+.savefilename-btn {
+  position: absolute;
+  width: 65px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
+  z-index: 10;
+  border-radius: 4px;
+  background-color: rgb(255, 211, 105);
+  color: #fff;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: none;
+  transition: .6s ease;
+}
+
+.savefilename-btn:hover {
+  right: 2px;
+  top: 2px;
+  bottom: 2px;
+  border-radius: 8px;
+}
+
+.save-container input:placeholder-shown ~ .savefilename-btn {
+  pointer-events: none;
+  background-color: gray;
+  opacity: 0.5;
+}
+.saveFilename{
+background-color:#EEEEEE;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+padding : 20px;
+width:80%;
+border-radius: 5px;
+
+}
 #captureImageButton {
   position: fixed;
   bottom: 20px;
@@ -434,18 +508,7 @@ for(int i=0; i<nameArr.length; i++) {
 </svg>
 </button>
 </form>
-<c:if test="${!empty mvo}">
-<div class="content">
-<div class="row" style="margin-top:40px; background-color:#EEEEEE; padding : 10px;">
-<form action="historyInsert.do">
-<input type="hidden" name="h_kind" value="비디오">
-<input type="hidden" name="h_value" value="${fileName}">
-<input type="text" name="h_comment" value="" placeholder="코멘트를 남겨주세요" required>
-<input type="submit" value="찜하기">
-</form>
-</div>
-</div>
-</c:if>
+
 		<div class="content">
 				<div class="player-Bigbox">
 				<div class="player-box">
@@ -721,8 +784,36 @@ try {
        </div> <!-- end search-card -->
 </div>
      </div>
-  </div>
-</div><!--end content-->
+  </div><!--end content-->
+  
+  <!-- 찜하기 -->
+<c:if test="${!empty mvo}">
+<div id="saveResult" class="content" style="display:none; margin-top : 20px;">
+<div class="saveFilename">
+<div class="row">
+<div class="col-8">
+<h5 style="color:#222831;">&#x1F4BE 분석된 결과를 저장하면 마이페이지에서 다시 볼 수 있습니다</h5>
+<span style="margin-left:32px;">알아보기 쉬운 코멘트를 입력해보세요</span>
+</div>
+<div class="col-4">
+<div class="save-container">
+<form action="historyInsert.do">
+<input type="hidden" name="h_kind" value="비디오">
+<input type="hidden" name="h_value" value="${fileName}">
+  <input type="text" name="h_comment" value="" placeholder="코멘트를 남겨주세요" required>
+  <button class="savefilename-btn" type="submit">
+    save
+  </button>
+ </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</c:if>
+<!-- end찜하기 -->
+  
+  
 </div><!--end predict-container-->
 
  <script type="text/javascript">
@@ -766,6 +857,7 @@ try {
                  $(".search-title").show();
                  $(".search-subTitle").show();
                  $('#search').html(html);
+                 $('#saveResult').show(); // saveResult 요소 보이기
                 
              },
              error : function(e) {

@@ -239,7 +239,7 @@ public class BoardController { //DAO 대신 mapper 호출
 	}
  
 	@GetMapping("/boardDelete.do")
-	public String boardDelete(long board_num) {
+	public String boardDelete(Long board_num) {
 		mapper.remove(board_num);
 		return "redirect:/mypage.do";
 	}

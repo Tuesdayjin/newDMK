@@ -31,6 +31,12 @@
  <!-- Bootstrap Icons library -->
  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 <style>
+.nickBox {
+margin-top :20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
     .titleRow p {
         display: inline-block;
         margin-right: 10px;
@@ -205,18 +211,14 @@ color : #FFD369;
 <div class="row">
 <div class="col-3">
 
-<div class="card profile-card" style="width: 18rem; background-color : rgba(238, 238, 238,0.8);">
-   <!-- <img class="rounded-circle me-3"
-                                    src="http://localhost:8081/profile/profile_${board_vo.profile_name}" alt="..."
-                                    style="width:45px; height:45px;" /> -->
+<div class="card profile-card" style="width: 18rem; height:94.5%; background-color : rgba(238, 238, 238,0.8);">
   <div class="card-body">
-  <div class="profileImg" style="width:100px; height:100px;">
- <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-</svg>
+  <div class="profileImg" style="width:150px; height:150px; border-radius:50%; background-color:red;">
+ <img src="${mvo.profile_name}"  style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
   </div>
-    <h5 class="card-title" style="margin-top : 20px; margin-left:20px;">닉네임</h5>
+  <div class="nickBox">
+    <h5 class="card-title" style="text-align:center;">${mvo.nick}</h5>
+    </div>
   </div>
   <div class="card-footer">
     <a href="#" class="card-link">내 정보 수정</a>
@@ -246,27 +248,27 @@ color : #FFD369;
       <td>
       <a class="text-decoration-none link-dark" href="boardContent.do?num=${board_vo.num}">
        <c:if test="${!empty board_vo.img_name}">
-      <div class="mypageThum">
+      <div class="mypageThum" style="width:100px; height:100px; border-radius:5px;  background-color:red;">
        <!-- 이미지 있을때만 -->
-        <img class="card-img-top" src="http://localhost:8081/boardimg/thumb_${board_vo.img_name}" alt="Post 1" />        
+        <img class="card-img-top" src="http://localhost:8081/boardimg/thumb_${board_vo.img_name}" alt="Post 1" style=" width:100%; object-fit: cover;"/>        
       </div>
         </c:if>
       </a>
       </td>
-      <td>
+      <td style="vertical-align: middle;">
       <a class="text-decoration-none link-dark" href="boardContent.do?num=${board_vo.num}"><p style="font-size: 16px; font-family: 'NanumSquare';">${board_vo.title}</p></a>
       </td>
-      <td>
+      <td style="vertical-align: middle;">
       <p style="font-size: 16px; font-family: 'NanumSquare';">${board_vo.views}</p>
       </td>
-      <td>
+      <td style="vertical-align: middle;">
       <p style="font-size: 16px; font-family: 'NanumSquare';"><fmt:formatDate value="${board_vo.indate}"  pattern="yyyy-MM-dd HH시 mm분" /></p>
       </td>
-      <td>
+      <td style="vertical-align: middle;">
       <!-- <a href="boardContent.do?num=${board_vo.num}" role="button"><p style="font-size: 16px; font-family: 'NanumSquare';">삭제</p></a> -->
       <form id="frm">
       <input type="hidden" id="boardNum" value="${board_vo.num}"/>
-      <button id="delBoard" data-btn="remove" class="btn btn-sm" style="color=black; background-color:#EEEEEE;">X
+      <button id="delBoard" data-btn="remove" class="btn btn-sm" style="color=black; background-color:#EEEEEE; bottom:6px;">삭제
       </button>
       </form>
       </td>
