@@ -18,57 +18,30 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Dramarket</title>
 <!-- Bootstrap 및 Bootswatch 스타일시트 파일 -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css" integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+" crossorigin="anonymous">
-<!-- Bootstrap 및 Bootswatch 자바스크립트 파일 -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-<!--bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css" integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+" crossorigin="anonymous">
+
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap Icons library -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
-    <script type="text/javascript" src="${cpath}/resources/js/dmk.js"></script>
-            <link rel="stylesheet" href="${cpath}/resources/css/font.css">
-    <script src="js/morph/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="${cpath}/resources/css/font.css">
+    
+    <!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
-<!--google font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <!-- Bootstrap Icons library -->
- <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
- <title>Dramarket</title>
-
-<!-- Bootstrap 및 Bootswatch 스타일시트 파일 -->
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css"
-	integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+"
-	crossorigin="anonymous">
-<!-- Bootstrap 및 Bootswatch 자바스크립트 파일 -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-	crossorigin="anonymous"></script>
-<script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-	crossorigin="anonymous"></script>
-<script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-	crossorigin="anonymous"></script>
-<!--bootstrap-->
-<link rel="stylesheet" href="${cpath}/resources/css/style.css">
-<script type="text/javascript" src="${cpath}/resources/js/dmk.js"></script>
-<script src="js/morph/bootstrap.min.js"></script>
-<!--google font-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-	rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-
+    <!-- Bootstrap 및 Bootswatch 자바스크립트 파일 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <!--amalia.js-->
 <script type="text/javascript"
 	src="http://localhost:8081/flask/full/bower_components/jquery/dist/jquery.js"></script>
@@ -86,9 +59,45 @@
 <script type="text/javascript"
 	src="http://localhost:8081/flask/full/build/js/i18n/amalia.js-message-en.js"></script>
 
-<!-- swiper -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<!-- Slick JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>	
+	
 <style>
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+}
+
+.slider-wrapper img {
+  display: inline-block;
+  height: 100%;
+  margin-right: 10px;
+}
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 80%;
+    width: 1px;
+  height: 1px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  left: 48%;
+}
+
+.next-btn {
+  right: 48%;
+}
+
 .save-container {
   position: relative;
   display: flex;
@@ -260,7 +269,7 @@ width : 100%;
 	   width : 100%;
 display: flex;
   border-radius: 10;
-  overflow : hidden;
+  /*overflow : hidden;*/
     }
 
 .search-objImg{
@@ -497,9 +506,6 @@ for(int i=0; i<nameArr.length; i++) {
 <div class="container">
 		<div class="header">
 		</div>
-						<!-- 캡쳐버튼 로그인 검증  <c:if test="${!empty mvo}">  
-				</c:if>  -->
-				
 <form id="captureForm" action="imgPredict.do" method="post" enctype="multipart/form-data">		
 <input type="hidden" name="captureFile" id="captureFile" value="">		
 <button id="captureImageButton" class="btn" type="button" title="재생 중인 장면을 추가 분석!"  data-bs-toggle="tooltip" >
@@ -520,7 +526,6 @@ for(int i=0; i<nameArr.length; i++) {
 				<div class="cover"></div>
 				</div>
 				</div>
-				<!--영상현재시간출력<div id="currentTimeDisplay"></div>-->
 </div>
 </div>
 			
@@ -528,7 +533,6 @@ for(int i=0; i<nameArr.length; i++) {
 				<script>
 				var player = null;
 					$(function() {
-					     
 						$("#player")
 								.mediaPlayer(
 										{
@@ -543,9 +547,7 @@ for(int i=0; i<nameArr.length; i++) {
 
 											plugins : {
 												dataServices : [
-
 												'http://localhost:8081/flask/pyscene/result/${fileName}.json'
-
 												],
 												list : [ {
 													'className' : 'fr.ina.amalia.player.plugins.TimelinePlugin',
@@ -567,11 +569,9 @@ for(int i=0; i<nameArr.length; i++) {
 										});
 					});
 					//영상 재생 시간 받기
-					
-			    
 					function onReady() {
 				        player = $('#player').data('fr.ina.amalia.player').getPlayer();
-				        // Set event listener on time change.
+				        //이벤트리스너 시간바꾸기
 				        $('#player').on('fr.ina.amalia.player.PlayerEventType.TIME_CHANGE', onTimeChange);
 				    }
 					
@@ -596,10 +596,8 @@ for(int i=0; i<nameArr.length; i++) {
 						  <%}%>
 						  
 						  console.log('Current playback time:', currentTime);
-						  
 						// 현재 재생 시간을 div에 출력
 						//$("#currentTimeDisplay").text("Current playback time: " + currentTime);
-						
 
 						}
 					//캡쳐버튼 클릭
@@ -608,17 +606,14 @@ for(int i=0; i<nameArr.length; i++) {
 						
 						});
 					function captureImage() {						
-						
 						//비디오 플레이어를 불러오기
 						  var videoElement = $('video', '#player')[0];
 						  var canvas = document.createElement('canvas');
 						  canvas.width = videoElement.videoWidth;
 						  canvas.height = videoElement.videoHeight;
-
 						  //비디오 위에 공간 잡기
 						  var ctx = canvas.getContext('2d');
 						  ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
-
 						  //지금 이미지의 주소 잡기
 						  var imageDataUrl = canvas.toDataURL('image/png');
 						  console.log('캡쳐이미지 : '+ imageDataUrl);
@@ -626,9 +621,7 @@ for(int i=0; i<nameArr.length; i++) {
 
 						  var formData=new FormData();
 						  formData.append("file",file );
-						  
 
-						  
 						    $.ajax({
 							      url: "captureUpload.do",
 							      type: "POST",
@@ -640,11 +633,9 @@ for(int i=0; i<nameArr.length; i++) {
 							    	//$('#imgdiv').append('<img src="http://localhost:8081/boardimg/'+ data +'" id="Sample">');
 							        $('#captureFile').val(data);
 							        $('#captureForm').submit();
-							     
 							      },
 							      error : function(){alert("파일 업로드에 실패하였습니다");}
 							    });
-						  
 					}
 	      
 	               // base64 이미지 -> File 객체로 변환하는 함수
@@ -672,9 +663,9 @@ for(int i=0; i<nameArr.length; i++) {
 </div>
 
 				</div>
-				<div class="predictObj-box">
+				<div class="predictObj-box slider-container">
 				<%for(int i=0; i<nameArr.length; i++) {%>
-<div class="predict_content<%=i%> predict-card"  style="display:none;">
+<div class="predict_content<%=i%> predict-card slider-wrapper"  style="display:none;">
 <%
 try {
     if (topDir[i] != null) {
@@ -752,8 +743,59 @@ try {
 <input type="hidden" class="end_time<%=i%>" value="<%=timeArr[i+1]%>">
 </div><!--end predict card-->
 <%}%>
+        <!--  <div class="row">
+<button class="prev-btn"style="border: none; background-color: transparent;"><i class="bi bi-dot" style="color:rgb(64,64,64); font-size:40px;"></i></button>
+  <button class="next-btn"style="border: none; background-color: transparent;"><i class="bi bi-dot" style="color:rgb(191,191,191); font-size:40px;"></i></button>
+</div> -->
          </div>
       </div><!-- end predict-Bigbox -->
+ 
+ <script>
+ //제이쿼리로 슬라이더 만들기(예측 객체)
+$(function() {
+	var $sliderWrapper = $('.slider-wrapper');
+	var $prevBtn = $('.prev-btn');
+	var $nextBtn = $('.next-btn');
+	var itemWidth = ($sliderWrapper.find('.objImg:first').outerWidth() + 10) * 8;
+	var currentPosition = 0;
+
+	// 자동 슬라이드 기능 추가
+	var autoSlideInterval;
+	if ($sliderWrapper.find('.objImg').length > 4) { // 이미지 개수가 4개 이상인 경우에만 자동 슬라이드 수행
+	  autoSlideInterval = setInterval(function() {
+	    // 다음 이미지로 이동
+	    if (currentPosition > -((itemWidth/2) * ($sliderWrapper.find('.objImg').length / 8 - 1))) {
+	      currentPosition -= itemWidth/2;
+	      $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
+	    }
+	    // 7초 후 이전 이미지로 이동
+	    setTimeout(function() {
+	      if (currentPosition < 0) {
+	        currentPosition += itemWidth/2;
+	        $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
+	      }S
+	    }, 7000);
+	  }, 10000);
+	}
+
+/*   // 이전 이미지들로 이동
+  $prevBtn.on('click', function() {
+    if (currentPosition < 0) {
+      currentPosition += itemWidth;
+      $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
+    }
+  });
+
+  // 다음 이미지들로 이동
+  $nextBtn.on('click', function() {
+    if (currentPosition > -(itemWidth * ($sliderWrapper.find('.objImg').length / 4 - 1))) {
+      currentPosition -= itemWidth;
+      $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
+    }
+  }); */
+});
+ </script>
+ 
  
 <!-- 객체 이미지 검색 -->
 <form method="post" id = "search_form">
@@ -770,7 +812,7 @@ try {
     <div class="predictObg-box">
 <div class="search-card">
   <!--<div id="search"> -->
-    <div id="search">
+    <div id="search" class="search-slick">
   <div class="wrapper"   style="display:none;">
     <div class="circle"></div>
     <div class="circle"></div>
@@ -826,7 +868,12 @@ try {
       imgpath = 'C:/dmkServer/' + imgpath.split('flask/')[1];
       $("#search_img").val(imgpath);
       
-  
+      // slick 해제
+      if (isSlickInitialized) {
+        $('.search-slick').slick('unslick');
+        isSlickInitialized = false;
+      }
+      
       // 검색 버튼 클릭 이벤트 강제로 실행
       $("#search_btn").trigger('click');
       // 로딩 화면 보이기
@@ -834,7 +881,7 @@ try {
      });   
  });
 
-  $(function() {
+  $(function() {	  
      $("#search_btn").on("click", function(event) {
          event.preventDefault();
          var form = $('#search_form')[0];
@@ -852,14 +899,60 @@ try {
              success : function(data) {
                  console.log(data)                  
                  var html = "";
-                 for (var i = 0; i < 4; i++) {  
+                 for (var i = 0; i < 6; i++) {  
                      html += '<div class="search-objImg"><a href="' + data['link'][i] + '" target="_blank"><img src="' + data['image'][i] + '"></a></div>';
                  }
                  $(".search-title").show();
                  $(".search-subTitle").show();
                  $('#search').html(html);
-                 $('#saveResult').show(); // saveResult 요소 보이기
-                
+                 
+                 // slick 해제
+                 if ($('.search-slick').hasClass('slick-initialized')) {
+                   $('.search-slick').slick('unslick');
+                 }
+                 
+              // slick 초기화
+                 if (!isSlickInitialized) {
+                 $('.search-slick').slick({
+           		  dots: true, //페이지 네비게이션
+           		  arrows:true, // next, prev 이동 버튼
+           		  autoplay:true, // 자동 넘김 여부
+           		  infinite: true, //반복설정
+           		  speed: 300, //슬라이드 속도
+           		  autoplaySpeed : 10000,   // 자동 넘김시 슬라이드 시간
+           		  pauseOnHover : true,// 마우스 hover시 슬라이드 멈춤
+           		  vertical : false,  // 세로 방향 슬라이드 옵션
+           		  slidesToShow: 4, //보여질 슬라이드 수
+           		  slidesToScroll: 3, //넘겨질 슬라이드 수
+           		  responsive: [ // -> 반응형 옵션
+           		    {
+           		      breakpoint: 1024, // 반응형 ~ 1024
+           		      settings: {
+           		        slidesToShow: 3,
+           		        slidesToScroll: 3,
+           		        infinite: true,
+           		        dots: true
+           		      }
+           		    },
+           		    {
+           		      breakpoint: 600,// 반응형 ~ 600
+           		      settings: {
+           		        slidesToShow: 2,
+           		        slidesToScroll: 2
+           		      }
+           		    },
+           		    {
+           		      breakpoint: 480,// 반응형 ~ 480
+           		      settings: {
+           		        slidesToShow: 1,
+           		        slidesToScroll: 1
+           		      }
+           		    }
+           		  ]
+           		});
+                 isSlickInitialized = true;
+                 }  
+                 
              },
              error : function(e) {
                  console.log("ERROR : ", e);
@@ -962,7 +1055,6 @@ try {
     </div>
 </div>
 </footer>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7Rdu7Bf4zVdcp4Xh3Pm4LI+J2SvD0oda3x3tvLAuta3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>

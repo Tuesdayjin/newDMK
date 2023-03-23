@@ -55,8 +55,8 @@
   justify-content: flex-end;
   align-items: center;
 }
-.col-2 .w-btn {
-  margin-right: 10px;
+.w-btn {
+margin-right: 62px;
 }
 
 .write-btn {
@@ -163,6 +163,7 @@
 }
 /* styling of whole input container */
 .form {
+margin-left: 40px;
   --timing: 0.3s;
   --width-of-input: 300px;
   --height-of-input: 40px;
@@ -323,9 +324,8 @@ color : #FFD369;
 }
 .boardInputGroup{
 margin-bottom : 40px;
-padding : 10px;
-border-radius : 5px;
-background-color : rgba(238, 238, 238, 0.8); 
+border-radius : 5px; 
+width: 100%;
 } 
 .newbadge {
   background-color: blue;
@@ -409,14 +409,11 @@ background-color : rgba(238, 238, 238, 0.8);
    <div class="py-5">
       <div class="container px-5 my-5">
          <div class="container">
-            <div class="container text-center" >
-               <div class="row boardInputGroup" style="background-color: #ffffff;">
-
-
+            <div class="content" >
+               <div class="row boardInputGroup">
+               <div class="col-2"></div>
                   <div class="col-8" style="  display: flex;  justify-content: center;  align-items: center;">
                   <c:if test="${empty mvo}">
-                  <div class="col-5">
-                  </div>
                   </c:if>
   <form class="form" action="boardSearch.do" style="display: flex; background-color:rgb(240,240,240); ">
       <button type="submit">
@@ -431,10 +428,6 @@ background-color : rgba(238, 238, 238, 0.8);
           </svg>
       </button>
   </form>
-                 <!--  <form action="boardSearch.do">
-                  <input type="text" name=searchWord>
-                  <button type="submit" class="btn btn-sm">검색</button>
-                  </form> -->
                   </div>
                   <div class="col-2">
                   <c:if test="${!empty mvo}">
@@ -449,7 +442,7 @@ background-color : rgba(238, 238, 238, 0.8);
                </div>
             </div>
 
-            <div id=scrollContainer class="row" data-masonry='{"percentPosition" : true}'>
+            <div id=scrollContainer class="row" data-masonry='{"percentPosition" : true}' style="margin-left:100px;">
                <c:forEach var="board_vo" items="${list}">
                   <div class="col-lg-4 col-md-5 col-6" style="width:auto;">
                      <div class="card shadow border-0"
@@ -521,11 +514,10 @@ writeBtn.addEventListener('click', () => {
 
 </script>
 
-      </div></div>	
+      </div>
+      </div>	
 		<!-- Blog preview section-->
 		<section class="py-5"></section>
-
-		</main>
 		<!-- Footer-->
 		<footer class="py-4 mt-auto"  style="background-color:#393E46;">
 			<div class="container px-5">
