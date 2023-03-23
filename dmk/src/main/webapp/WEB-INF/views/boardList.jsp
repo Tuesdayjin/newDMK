@@ -576,9 +576,15 @@ var loading = false;
 var page = 1; // 초기 페이지 값
 
 $(window).scroll(function() {
+	
+	if(window.location.href.indexOf('searchWord=') !== -1) {
+        return; // searchWord 파라미터가 있으면 무한스크롤 동작 안함
+    }
+	
     var bottomOffset = $(document).height() - $(window).height() - $(window).scrollTop();
+    var threshold = 100; // 임계값
 
-    if (bottomOffset <= 0 && !loading) {
+    if (bottomOffset <= threshold && !loading) {
         loading = true;
         var nextPage = page + 1;
         $.ajax({
