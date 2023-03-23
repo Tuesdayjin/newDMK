@@ -317,8 +317,8 @@ color : #FFD369;
 }
 .scene{
 font-family: 'GmarketSans';
-font-size : 60px;
 font-weight : 700;
+font-size : 60px;
 color : #FFD369;
 }
 .boardInputGroup{
@@ -326,7 +326,14 @@ margin-bottom : 40px;
 padding : 10px;
 border-radius : 5px;
 background-color : rgba(238, 238, 238, 0.8); 
-}     
+} 
+.newbadge {
+  background-color: blue;
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 30px;
+}    
       </style>
 </head>
 <body>
@@ -405,11 +412,13 @@ background-color : rgba(238, 238, 238, 0.8);
          <div class="container">
             <div class="container text-center" >
                <div class="row boardInputGroup" style="background-color: #ffffff;">
-               <c:if test="${!empty mvo}">
-                  <div class="col-2">
+
+
+                  <div class="col-8" style="  display: flex;  justify-content: center;  align-items: center;">
+                  <c:if test="${empty mvo}">
+                  <div class="col-5">
                   </div>
                   </c:if>
-                  <div class="col-8" style="  display: flex;  justify-content: center;  align-items: center;">
   <form class="form" action="boardSearch.do" style="display: flex; background-color:rgb(240,240,240); ">
       <button type="submit">
           <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
@@ -443,9 +452,9 @@ background-color : rgba(238, 238, 238, 0.8);
 
             <div id=scrollContainer class="row" data-masonry='{"percentPosition" : true}'>
                <c:forEach var="board_vo" items="${list}">
-                  <div class="col-lg-4 col-md-6 col-6">
+                  <div class="col-lg-4 col-md-5 col-6" style="width:auto;">
                      <div class="card shadow border-0"
-                        style="background-color: #eeeeee;">
+                        style="background-color: #eeeeee; width:315px; height:auto;">
                         <c:if test="${!empty board_vo.img_name}">
                            <!-- 이미지 있을때만 -->
                            <img class="card-img-top"
@@ -453,7 +462,7 @@ background-color : rgba(238, 238, 238, 0.8);
                               alt="Post 1" />
                         </c:if>
                         <div class="card-body p-4"
-                           href="boardContent.do?num=${board_vo.num}">
+                           href="boardContent.do?num=${board_vo.num}" style="text-align:left;">
 
 
                            <jsp:useBean id="now" class="java.util.Date" />
@@ -461,26 +470,30 @@ background-color : rgba(238, 238, 238, 0.8);
                            <fmt:formatDate value="${board_vo.indate}" pattern="yyyyMMdd"
                               var="writeDate" />
                            <c:if test="${nowDate == writeDate}">
-                              <div class="badge bg-primary bg-gradient rounded-pill mb-2">New</div>
+                           <div style="width:50px; height:18px; text-align:center; background-color: rgb(249,205,90);   border-radius: 30px; 
+								   margin-top:-3px;  margin-bottom: 5px;">
+	                           <p style="top:-30px; font-size:12px; font-family: 'GmarketSans'; font-weight: 800; color:#ffffff;" >New</p>
+                           </div>
                            </c:if>
                            <a class="text-decoration-none link-dark stretched-link"
-                              href="boardContent.do?num=${board_vo.num}"><h5
-                                 class="card-title mb-3">${board_vo.title}</h5></a>
+                              href="boardContent.do?num=${board_vo.num}"><h6
+                                 class="card-title mb-3">${board_vo.title}</h6></a>
 
                         </div>
                         <div class="card-footer p-4 pt-0 bg-transparent border-top-0 ">
                            <div class="d-flex align-items-end justify-content-between">
-                              <div class="d-flex align-items-center">
+                              <div class="d-flex align-items-center" style="text-align:left;">
                                  <img class="rounded-circle me-3"
                                     src="http://localhost:8081/profile/profile_${board_vo.profile_name}" alt="..."
                                     style="width:55px; height:55px;" />
                                  <div class="small">
                                     <div class="fw-bold">${board_vo.nick}</div>
-                                    <div class="text-muted"><span style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300; color:rgb(130,130,130);">
+                                    <div class="text-muted"><span style="font-size:13px; font-family: 'NanumSquare'; font-weight: 400; color:rgb(130,130,130);
+                                     padding:0; margin-top:0px; margin-bottom: 0px;">
                                        <fmt:formatDate value="${board_vo.indate}"
                                           pattern="yyyy-MM-dd HH시 mm분" /></span>
                                     </div>
-                                    <div class="text-muted" style="top:-20px;"><span style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300; color:rgb(130,130,130);">read ${board_vo.views}</span></div>
+                                    <div class="text-muted" style="top:-20px;"><span style="font-size:13px; font-family: 'NanumSquare'; font-weight: 400; color:rgb(130,130,130);">read ${board_vo.views}</span></div>
                                  </div>
                               </div>
                            </div>

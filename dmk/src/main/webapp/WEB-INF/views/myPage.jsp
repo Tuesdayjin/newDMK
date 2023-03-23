@@ -266,8 +266,8 @@ table.type04 {
  <img src="http://localhost:8081/profile/profile_${mvo.profile_name}"  style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
   </div>
   <div style="text-align: left; margin-left:1px;">
-    <h5 class="card-title" style="text-align:center;">${mvo.nick}</h5>
-    <a href="#" class="card-link" style="padding-left:28px;">내 정보 수정</a>
+    <h5 class="card-title" style="text-align:left;padding-left:20px;">${mvo.nick}</h5>
+    <a href="#" class="card-link" style="padding-left:20px;">내 정보 수정</a>
   </div>
 
   </div>
@@ -352,7 +352,7 @@ table.type04 {
     </tr>
   </thead>
   <tbody>
- <c:if test="${empty list}">
+ <c:if test="${empty h_list}">
     <tr>
       <td colspan=3>
       영상 검색을 이용한 기록이 없습니다. (검색 후 기록 남기기 버튼을 눌러주세요)
