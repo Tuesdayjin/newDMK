@@ -582,7 +582,7 @@ $(window).scroll(function() {
     }
 	
     var bottomOffset = $(document).height() - $(window).height() - $(window).scrollTop();
-    var threshold = 300; // 임계값
+    var threshold = 1000; // 임계값
 
     if (bottomOffset <= threshold && !loading) {
         loading = true;
