@@ -402,14 +402,14 @@ background-color : rgba(238, 238, 238, 0.8);
    <div class="py-5">
       <div class="container px-5 my-5">
          <div class="container">
-            <div class="container text-center">
-               <div class="row boardInputGroup">
+            <div class="container text-center" >
+               <div class="row boardInputGroup" style="background-color: #ffffff;">
                <c:if test="${!empty mvo}">
                   <div class="col-2">
                   </div>
                   </c:if>
                   <div class="col-8" style="  display: flex;  justify-content: center;  align-items: center;">
-  <form class="form" action="boardSearch.do" style="display: flex;">
+  <form class="form" action="boardSearch.do" style="display: flex; background-color:rgb(240,240,240); ">
       <button type="submit">
           <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="search">
               <path d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9" stroke="currentColor" stroke-width="1.333" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -432,7 +432,7 @@ background-color : rgba(238, 238, 238, 0.8);
 <div class="w-btn">
 <button id="writebtn" class="write-btn writeadd-btn">
     <div class="add-icon"></div>
-    <div class="btn-txt">글쓰기</div>
+    <div class="btn-txt"><span style="font-size:15px; font-family: 'GmarketSans'; font-weight: 800; color:#ffffff;">글쓰기</span></div>
 </button>
 </div>
                   </div>
@@ -444,7 +444,7 @@ background-color : rgba(238, 238, 238, 0.8);
                <c:forEach var="board_vo" items="${list}">
                   <div class="col-lg-4 col-md-6 col-6">
                      <div class="card shadow border-0"
-                        style="background-color: #EEEEEE;">
+                        style="background-color: #eeeeee;">
                         <c:if test="${!empty board_vo.img_name}">
                            <!-- 이미지 있을때만 -->
                            <img class="card-img-top"
@@ -472,14 +472,14 @@ background-color : rgba(238, 238, 238, 0.8);
                               <div class="d-flex align-items-center">
                                  <img class="rounded-circle me-3"
                                     src="http://localhost:8081/profile/profile_${board_vo.profile_name}" alt="..."
-                                    style="width:45px; height:45px;" />
+                                    style="width:55px; height:55px;" />
                                  <div class="small">
                                     <div class="fw-bold">${board_vo.nick}</div>
-                                    <div class="text-muted">
+                                    <div class="text-muted"><span style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300; color:rgb(130,130,130);">
                                        <fmt:formatDate value="${board_vo.indate}"
-                                          pattern="yyyy-MM-dd HH시 mm분" />
+                                          pattern="yyyy-MM-dd HH시 mm분" /></span>
                                     </div>
-                                    <div class="text-muted">read ${board_vo.views}</div>
+                                    <div class="text-muted" style="top:-20px;"><span style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300; color:rgb(130,130,130);">read ${board_vo.views}</span></div>
                                  </div>
                               </div>
                            </div>
