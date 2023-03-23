@@ -361,7 +361,7 @@ color : #FFD369;
 							<li class="nav-item"><a class="nav-link" data-href="board" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Board</a>
 							</li>
 							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" data-href="mypage" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Mypage</a>
+								<li class="nav-item"><a class="nav-link" data-href="myPage" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Mypage</a>
 								</li>
 								<li class="nav-item"><a class="nav-link" data-href="logout" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
 								</li>
@@ -734,8 +734,8 @@ color : #FFD369;
 				var href = $(this).data("href");
 				if (href == "board") {
 					location.href = 'boardList.do'
-				} else if (href == "mypage") {
-					location.href = 'link'
+				} else if (href == "myPage") {
+					location.href = 'myPage.do'
 				} else if (href == "login") {
 					location.href = 'login.do'
 				} else if (href == "logout") {

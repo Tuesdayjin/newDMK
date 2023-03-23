@@ -213,8 +213,8 @@ color : #FFD369;
 
 <div class="card profile-card" style="width: 18rem; height:94.5%; background-color : rgba(238, 238, 238,0.8);">
   <div class="card-body">
-  <div class="profileImg" style="width:150px; height:150px; border-radius:50%; background-color:red;">
- <img src="${mvo.profile_name}"  style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+  <div class="profileImg" style="width:150px; height:150px; border-radius:50%;">
+ <img src="http://localhost:8081/profile/profile_${mvo.profile_name}"  style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
   </div>
   <div class="nickBox">
     <h5 class="card-title" style="text-align:center;">${mvo.nick}</h5>
@@ -248,7 +248,7 @@ color : #FFD369;
       <td>
       <a class="text-decoration-none link-dark" href="boardContent.do?num=${board_vo.num}">
        <c:if test="${!empty board_vo.img_name}">
-      <div class="mypageThum" style="width:100px; height:100px; border-radius:5px;  background-color:red;">
+      <div class="mypageThum" style="width:100px; height:100px; border-radius:5px;">
        <!-- 이미지 있을때만 -->
         <img class="card-img-top" src="http://localhost:8081/boardimg/thumb_${board_vo.img_name}" alt="Post 1" style=" width:100%; object-fit: cover;"/>        
       </div>

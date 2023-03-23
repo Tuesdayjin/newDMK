@@ -380,7 +380,7 @@ function output(data) {
 			str += '<div class="col-11 small commentBox">';     
 			str += '<div class="row commentText" style="padding-left: 20px;">';
 			str += '<div class="col-2"><div class="fw-bold">'
-					+ item["cmt_id"] + '</div>';
+					+ item["nick"] + '</div>';
 			str += '</div>';
 			str += '<div class="col-10"><div class="text-muted">'
 					+ formatDate(item["indate"]) + '</div>';
