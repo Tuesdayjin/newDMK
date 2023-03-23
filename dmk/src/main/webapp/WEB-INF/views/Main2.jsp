@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -16,81 +16,71 @@
 <script type="text/javascript" src="${cpath}/resources/js/dmk.js"></script>
 <!-- Bootstrap 및 Bootswatch 스타일시트 파일 -->
 <link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css"
-	integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+"
-	crossorigin="anonymous">
+   href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css"
+   integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+"
+   crossorigin="anonymous">
 <!-- Bootstrap 및 Bootswatch 자바스크립트 파일 -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-	crossorigin="anonymous"></script>
+   integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+   crossorigin="anonymous"></script>
 <script
-	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-	crossorigin="anonymous"></script>
+   src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+   integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+   crossorigin="anonymous"></script>
 <script
-	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-	crossorigin="anonymous"></script>
+   src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+   integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+   crossorigin="anonymous"></script>
 <!--bootstrap-->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
 <link rel="stylesheet" href="bootstrap.css">
 <script src="js/morph/bootstrap.min.js"></script>
 <!--google font-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
-	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-	rel="stylesheet">
+   href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+   rel="stylesheet">
 <style>
-
-.titleborderbox{
-padding-top: 10px;
-padding-bottom: 10px;
-padding-left: 20px;
-padding-right: 20px;
-border : solid 1px;
- border-color :rgba(255,255,255,0.5);
-display:inline-block;
-}
-.introTitle p{
-margin-top : 15px;
-color : #FFFFFF;
-font-size: 20px;
-}
-.shopping{
-font-size : 50px;
-font-weight : 700;
-color : #FFD369;
-}
-.inthe{
-font-size : 40px;
-color : #FFD369;
-}
-.scene{
-font-size : 50px;
-font-weight : 700;
-color : #FFD369;
-}
-      video {
-       position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: 0;
-      }
-  .headervideo-box {
-  position: absolute;
+.grabox{
+ position: absolute;
+  z-index: 1;
   top: 0;
-  left: 0;
-  width: 100%;
+  background: linear-gradient(to bottom, #222831, rgba(34, 40, 49, 0.3));
   height: 100%;
-  background-color: rgba(57, 62, 70, 0.5);
-  z-index: 10;
-}      
+  width: 100%;
+}
+    .titleRow p {
+        display: inline-block;
+        margin-right: 10px;
+    }
+  .titleBoarderBox {
+    position: absolute;
+    top: 45%;
+    left: 33%;
+    transform: translate(-50%, -50%);
+  }
+  .subTitleRow {
+    margin-top: -15px;
+  }
+
+header {
+  position: relative;
+  z-index: 2;
+}
+
+.selectNavBar {
+  position: relative;
+  z-index: 2;
+}
+
+      .headerimg {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
+      }
+
+      
 /*업로드 중의 모달*/
 .modal-body {
 height: 300px;
@@ -175,7 +165,6 @@ background-image: linear-gradient(#FFD369, #FEB57F, #E48E8E);
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-
 
 
 
@@ -312,36 +301,67 @@ a {
     object-fit:cover;
 }
 
+.introTitle p{
+font-family: 'GmarketSans';
+font-weight : 300;
+margin-top : 19px;
+color : #FFFFFF;
+font-size: 20px;
+}
+.shopping{
+font-family: 'GmarketSans';
+font-size : 60px;
+font-weight : 700;
+color : #FFD369;
+}
+.inthe{
+font-family: 'GmarketSans';
+font-size : 45px;
+font-weight : 300;
+color : #FFD369;
+}
+.scene{
+font-family: 'GmarketSans';
+font-size : 60px;
+font-weight : 700;
+color : #FFD369;
+}
+
 
 </style>
-<!--font-family: 'NanumSquare', sans-serif-->
+
+</style>
 </head>
 <body>
-	<button onclick="topFunction()" id="myBtn" class="btn btn-info to-top"
-		title="Go to top">TOP</button>
 
-	<div style="background-color: #393E46; position: sticky; top: 0; z-index: 9999;">
-		<nav class="navbar navbar-expand-lg">
-			<div class="container-fluid" style="width: 70%;">
-				<a class="navbar-brand" href="Main.do" style="color: #FFD369;">
-                  <span  style="font-size:23px; font-family: 'Cafe24Danjunghae';">DRAMARKET</span>
+   <button onclick="topFunction()" id="myBtn" class="btn btn-info to-top"
+      title="Go to top">TOP</button>
+
+
+   <div style="background-color: #222831; position: sticky; top: 0; z-index: 99;">
+      <nav class="navbar navbar-expand-lg">
+         <div class="container-fluid" style="width: 70%;">
+            <a class="navbar-brand" href="Main.do" style="color: #FFD369;">
+               <span  style="font-size:23px; font-family: 'Cafe24Danjunghae';">DRAMARKET</span>
+            <img src="${cpath}/resources/img/dmkimg/dmksim.png"width="20" height="24" style="margin-left:3px; margin-top:4px;" class="d-inline-block align-text-top">
                   </a>
-				<div class="d-flex justify-content-end">
-					<button class="navbar-toggler" type="button"
-						data-bs-toggle="collapse" data-bs-target="#navbarColor02"
-						aria-controls="navbarColor02" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarColor02">
+            <div class="d-flex justify-content-end">
+               <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                  aria-controls="navbarColor02" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarColor02">
 
-						<ul class="navbar-nav me-auto">
+
+                 <ul class="navbar-nav me-auto">
 							<li class="nav-item"><span class="visually-hidden">(current)</span>
 								</a></li>
 							<li class="nav-item"><a class="nav-link" data-href="board" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Board</a>
 							</li>
 							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" data-href="mypage" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Mypage</a>
+								<li class="nav-item"><a class="nav-link" data-href="myPage" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Mypage</a>
 								</li>
 								<li class="nav-item"><a class="nav-link" data-href="logout" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
 								</li>
@@ -351,53 +371,58 @@ a {
 								<a class="nav-link" data-href="login" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Login</a></li>
 							</c:if>
 						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
-	<!-- Header-->
-	<header class="py-5 dmkHeader" style=" height: 100vh;">
-<div class="headervideo-box">
-<div class="grabox" style="background: linear-gradient(to bottom, #393E46, rgba(57, 62, 70, 0)); height: 300px; width: 100%; text-align : center; display: inline-block;">
-<div class="introTitle" style="margin:18%;">
-<div class="titleborderbox" style="margin-top: -120px;" border="2px">
-<div style="margin-left: 70px;margin-right: 70px;"><span class="shopping">Shopping </span><span class="inthe" style="font-size:40px; font-family: 'GmarketSans'; font-weight: 300;">in the </span>
-<span class="scene">Scene</span></div>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </div>
+   <!-- Header-->
+<header class="py-5" style="background-color: #393E46; height:350px;">
+<div class="grabox">
+<div class="titleBoarderBox">
+<div class="titleRow">
+<p class="shopping" style="color:#EEEEEE;">Shopping </p>
+		<p class="inthe" style="color:#EEEEEE;">in the </p>
+		<p class="scene" style="color:#EEEEEE;">Scene</p>
+<div class="subTitleRow">
+<span style="font-size:20px; font-family: 'NanumSquare'; font-weight:300; color:#FFFFFF;">영상 속 그 제품, 스쳐가지 마세요</span>
 </div>
-<p style="font-size:20px; font-family: 'NanumSquare'; font-weight:300;">영상 속 그 제품, 스쳐가지 마세요</p>
 </div>
 </div>
-<button class="scrollbtn" onclick="scrollToContent()">
-    <div class="scroll"></div>
-</button>
 </div>
-<video
-  playsinline="playsinline"
-  autoplay="autoplay"
-  muted="muted"
-  loop="loop">
-  <source src="http://localhost:8081/flask/resources/img/dmkimg/mainheader.mp4" type="video/mp4" />
-</video></div>
-		<div id="mainContent"></div>
-	</header>
-	<div>
-		<ul class="nav justify-content-center selectNavBar">
-			<li class="nav-item selectNavTab"><a class="nav-link selectNav"
-				data-target="#howto" aria-current="page" href="#">How to</a></li>
-			<li class="nav-item selectNavTab"><a class="nav-link selectNav"
-				data-target="#uploadLink" href="#">Enter Link</a></li>
-			<li class="nav-item selectNavTab"><a class="nav-link selectNav"
-				data-target="#uploadFile" href="#">Upload Video</a>
-		</ul>
-	</div>
-	
-	<div class="py-5">
-		<div class="container px-5 my-5">
-			<div class="row gx-5 justify-content-center">
-				<div class="col-lg-10 col-xl-7">
-					<div class="text-center tab-content">
-						<div id="howto" style="display: flex; justify-content: center; align-items: center;">
+
+
+
+<img class="headerimg" src="${cpath}/resources/img/dmkimg/Drama.png">
+    <div class="container px-5">
+        <div class="row gx-5 align-items-center justify-content-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+                <div class="my-5 text-center text-xl-start">
+                    <h1 class="display-5 fw-bolder text-white mb-2"></h1>
+                    <p class="lead fw-normal text-white-50 mb-4"></p>
+
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</header>
+   <div>
+      <ul class="nav justify-content-center selectNavBar">
+         <li class="nav-item selectNavTab"><a class="nav-link selectNav"
+            data-target="#howto" aria-current="page" href="#">How to</a></li>
+         <li class="nav-item selectNavTab"><a class="nav-link selectNav"
+            data-target="#uploadLink" href="#">Enter Link</a></li>
+         <li class="nav-item selectNavTab"><a class="nav-link selectNav"
+            data-target="#uploadFile" href="#">Upload Video</a>
+      </ul>
+   </div>
+   <div class="py-5">
+      <div class="container px-5 my-5">
+         <div class="row gx-5 justify-content-center">
+            <div class="col-lg-10 col-xl-7">
+               <div class="text-center tab-content">
+                 <div id="howto" style="display: flex; justify-content: center; align-items: center;">
 							<div class="howtoarea" style="display: inline-block; height: auto; background-color: #FFFFFF;">
 								<span style="color: #F9CD5A; font-size: 33px; font-family: 'NanumSquare';">about</span><br>
 								<span style="color: #F9CD5A; font-size: 44px; font-family: 'Cafe24Danjunghae';">DRAMARKET</span><br>
@@ -499,7 +524,7 @@ a {
 									<span style="font-size: 16px; font-family: 'NanumSquare'; ">
 									  </span><br><br><br>
 									
-									<button type="button" onclick="location.href='boardList.do'"class="btn btn-sm enjoyhover"style=" background-color: #F9CD5A; ">
+									<button type="button" onclick="location.href='boardList.do'" class="btn btn-sm enjoyhover"style=" background-color: #F9CD5A; ">
 									  <div class="hidden-hover"  style="color:#FFFFFF; font-family: 'NanumSquare';font-weight:600;">게시판 놀러가기</div>
 									  <div class="show-hover" style="color:#FFFFFF;font-family: 'NanumSquare';font-weight:600;">COME ON!</div>
 									</button>
@@ -554,7 +579,7 @@ a {
 										<div>
 											<form action="http://localhost:5000/link" method="post">
 												<input type="text" class="form-control"
-													placeholder="링크를 입력해주세요" name="uploadLink">
+													placeholder="링크를 입력해주세요" name="uploadLink" required>
 										</div>
 										<div>
 											<button class="btn btn-lg btn-primary uploadBtn"
@@ -671,7 +696,6 @@ a {
 				$(target).show().siblings().hide();
 			});
 			
-			
 			$('#fileupload').click(function(e) {
 				e.preventDefault();
 				$('#uploadFile').show().siblings().hide();
@@ -680,7 +704,7 @@ a {
 				$('a[data-target="#uploadFile"]').addClass("active");
 				$('a[data-target="#uploadLink"]').removeClass("active");
 				$('a[data-target="#howto"]').removeClass("active");
-				scrollFunction()
+				window.scrollTo( 0, 400 );
 			});
 			
 			$('#linkupload').click(function(e) {
@@ -690,13 +714,11 @@ a {
 				$('a[data-target="#uploadLink"]').addClass("active");
 				$('a[data-target="#uploadFile"]').removeClass("active");
 				$('a[data-target="#howto"]').removeClass("active");
-				scrollFunction()
+				window.scrollTo( 0, 400 );
 			});
 			
+			
 		});
-		
-		
-
 
 		//nav아래의 강조선
 		const navLinks = document.querySelectorAll(".nav-link");
@@ -712,8 +734,8 @@ a {
 				var href = $(this).data("href");
 				if (href == "board") {
 					location.href = 'boardList.do'
-				} else if (href == "mypage") {
-					location.href = 'link'
+				} else if (href == "myPage") {
+					location.href = 'myPage.do'
 				} else if (href == "login") {
 					location.href = 'login.do'
 				} else if (href == "logout") {
@@ -763,7 +785,7 @@ a {
 				document.body.scrollTop = 0;
 				document.documentElement.scrollTop = 0;
 			}
-		});
+		}); 
 	
 	</script>
 	
@@ -823,5 +845,6 @@ setInterval(function(){
     $('.slider-1 > .side-btns > div').eq(1).click();
 }, 300000);
 </script>
+
 </body>
 </html>

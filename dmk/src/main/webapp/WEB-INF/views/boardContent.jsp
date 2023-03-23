@@ -145,7 +145,7 @@ color : #FFD369;
 								<li class="nav-item"><a class="nav-link" href="boardList.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Board</a>
 								</li>
 							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="#" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
+								<li class="nav-item"><a class="nav-link" href="myPage.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="logout.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
 								</li>
@@ -252,11 +252,7 @@ color : #FFD369;
           <div class="row comment" id='commentList'>
        
             </div>
-            
-            
-            
-            
-            
+      
             
           </div>
     <!--작성 댓글 목록 끝-->
@@ -376,7 +372,7 @@ function output(data) {
 	var str = "";
 	if (data.length > 0) {
 		$.each(data,function(index, item) {
-			str += '<div class="col-1 "><img class="rounded-circle me-3 commentImg" src="http://localhost:8081/profile/profile_' + item["profile_name"] + '" alt="..." /></div>';
+			str += '<div class="col-1 "><img class="rounded-circle me-3 commentImg" src="http://localhost:8081/profile/profile_' + item["profile_name"] + '" alt="..."  style="width:45px; height:45px;" /></div>';
 			str += '<div class="col-11 small commentBox">';     
 			str += '<div class="row commentText" style="padding-left: 20px;">';
 			str += '<div class="col-2"><div class="fw-bold">'

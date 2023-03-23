@@ -136,6 +136,55 @@ color : #FFD369;
   align-items: center;
 }
 
+table.type04 {
+    border-collapse: separate;
+    width: 100%;
+    border-spacing: 1px;
+    text-align: left;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+  }
+  table.type04 th {
+    width: 40%;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+  }
+  table.type04 td {
+    width: 100%;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  table.type05 {
+    border-collapse: separate;
+     width: 100%;
+    border-spacing: 1px;
+    text-align: center;
+    line-height: 1.5;
+    border-top: 1px solid #ccc;
+    margin : 20px 10px;
+  }
+  table.type05 th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  table.type05 td {
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+  }
+  #mainBody{max-width: 600px;
+  min-width: 300px;
+  			 text-align: center;
+  			     margin-left: auto;
+    margin-right: auto;}
+
 </style>
 
 </head>
@@ -206,43 +255,51 @@ color : #FFD369;
         </div>
     </div>
 </header>
-<section class="py-5">
-<div class="container">
+<section class="py-5" >
+<div class="container" >
 <div class="row">
 <div class="col-3">
 
-<div class="card profile-card" style="width: 18rem; height:94.5%; background-color : rgba(238, 238, 238,0.8);">
-  <div class="card-body">
-  <div class="profileImg" style="width:150px; height:150px; border-radius:50%;">
+<div class="card profile-card" style="width: 18rem; height:auto%; background-color :#FFFFFF; top:6%;">
+  <div class="profile" style="display:flex; align-items: center;">
+  <div class="profileImg" style="width:90px; height:90px; border-radius:50%;">
  <img src="http://localhost:8081/profile/profile_${mvo.profile_name}"  style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
   </div>
-  <div class="nickBox">
+  <div style="text-align: left; margin-left:1px;">
     <h5 class="card-title" style="text-align:center;">${mvo.nick}</h5>
-    </div>
+    <a href="#" class="card-link" style="padding-left:28px;">내 정보 수정</a>
   </div>
-  <div class="card-footer">
-    <a href="#" class="card-link">내 정보 수정</a>
-    <a href="#" class="card-link">고객 센터</a>
+
   </div>
 </div>
 
 </div>
 <div class="col-9">
-<div class="card myBoard-card" style="width: 100%; background-color : rgba(238, 238, 238,0.8);">
-<div class="card-header">
-<h4>내 게시글</h4>
-</div>
+<div class="card myBoard-card" style="width: 100%; background-color :#ffffff;">
+
   <div class="card-body">
-  <table class="table ">
-  <thead>
+  
+<h4 style="margin-left:3%;">내 게시글</h4>
+ 
+ <table class="type05">
     <tr>
-      <th scope="col">미리보기</th>
-      <th scope="col">제목</th>
-      <th scope="col">조회수</th>
-      <th scope="col">작성일</th>
+      <th >미리보기</th>
+      <th >제목</th>
+      <th >조회수</th>
+      <th >작성일</th>
     </tr>
-  </thead>
-  <tbody>
+
+
+
+ <tbody>
+ <c:if test="${empty list}">
+    <tr>
+      <td colspan=4>
+      작성한 게시글이 없습니다. 
+      </td>
+    </tr>
+ 
+ </c:if>
     <c:forEach var="board_vo" items="${list}">
     <tr>
       <td>
@@ -275,17 +332,18 @@ color : #FFD369;
     </tr>
     </c:forEach>
   </tbody>
+
 </table>
+ 
+
   </div>
 </div>
-</div>
 <div class="col">
-<div class="card myBoard-card" style="width: 100%; background-color : rgba(238, 238, 238,0.8);">
-<div class="card-header">
-<h4>내 히스토리</h4>
-</div>
+<div class="card myBoard-card" style="width: 100%; background-color :#ffffff;">
+
   <div class="card-body">
-  <table class="table ">
+<h4 style="margin-left:3%;">내 히스토리</h4>
+  <table class="type05">
   <thead>
     <tr>
       <th scope="col">날짜</th>
@@ -294,6 +352,13 @@ color : #FFD369;
     </tr>
   </thead>
   <tbody>
+ <c:if test="${empty list}">
+    <tr>
+      <td colspan=3>
+      영상 검색을 이용한 기록이 없습니다. (검색 후 기록 남기기 버튼을 눌러주세요)
+      </td>
+    </tr>
+ </c:if>
     <c:forEach var="history_vo" items="${h_list}">
     <tr>
       <td>
@@ -313,13 +378,17 @@ color : #FFD369;
     </tr>
     </c:forEach>
   </tbody>
+</table> 
 </table>
   </div>
+</div>
 </div>
 </div>
 </div><!-- end row -->
 </div><!-- end container -->
 </section>
+
+
 
 <!-- Footer-->
 <footer class="py-4 mt-auto"  style="background-color:#393E46;">
