@@ -743,6 +743,7 @@ a {
 		document.addEventListener("DOMContentLoaded", function() {
 			// DOM이 완전히 로드된 후에 스크립트가 실행
 			let mybutton = document.getElementById("myBtn");
+			mybutton.addEventListener("click", topFunction);
 
 			window.onscroll = function() {
 				scrollFunction()
