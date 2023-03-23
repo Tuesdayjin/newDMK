@@ -361,7 +361,6 @@ background-color : rgba(238, 238, 238, 0.8);
 							<li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Home
 									<span class="visually-hidden">(current)</span>
 							</a></li>
-								</li>
 							<c:if test="${!empty mvo}">
 								<li class="nav-item"><a class="nav-link" href="myPage.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
 								</li>

@@ -475,9 +475,10 @@ for(int i=0; i<nameArr.length; i++) {
 							<li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Home
 									<span class="visually-hidden">(current)</span>
 							</a></li>
-								</li>
+							<li class="nav-item"><a class="nav-link" href="boardList.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Board</a>
+							</li>
 							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="#" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
+								<li class="nav-item"><a class="nav-link" href="myPage.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
 								</li>
 								<li class="nav-item"><a class="nav-link" href="logout.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
 								</li>

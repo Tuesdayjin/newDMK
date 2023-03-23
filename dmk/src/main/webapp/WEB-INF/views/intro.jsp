@@ -443,7 +443,7 @@ a {
 							<div class="howtoarea justify-content-center" style="background-color: #E3E3E3; height:auto; padding-bottom: 25px;">
 							<br><br>
 								<span style="color: #505050; font-size: 38px; font-family: 'Cafe24Danjunghae';">How to use</span><br><br><br>
-							<div class="row" style="width:100%;">
+							<div class="row" style="width : 100%;">
 								<div class="col-sm-2" style="margin-left:10px;"></div>							
 								  <div class="col-sm-4" style="position: relative;">
 								  <div style="overflow:hidden; width: 160px;height: 300px; position: absolute; background-color: #eeeeee; width:240px;height:270px; float: left;  top:70px; right:80%;  z-index: 2;">
@@ -507,7 +507,7 @@ a {
 									<br> <br> <br><br>
 									
 									
-			<div class="row justify-content-center" style="width:100%;">
+								<div class="row justify-content-center" style="width:100%;">
 								  <div class="col-sm-3" style="position: relative;">
 								    <div class="card"style="background-color: #FFFFFF;">
 								      <div class="card-body image-box" style="background-color: #FFFFFF;" >
@@ -712,7 +712,7 @@ a {
 				if (href == "board") {
 					location.href = 'boardList.do'
 				} else if (href == "mypage") {
-					location.href = 'myPage.do'
+					location.href = 'link'
 				} else if (href == "login") {
 					location.href = 'login.do'
 				} else if (href == "logout") {
