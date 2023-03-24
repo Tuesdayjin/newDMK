@@ -218,10 +218,10 @@ width : 100%;
   position: absolute;
   top: 0;
   left: 0;
-  width: 98.1%;
-  height: 39px;
-  background-color : #3f3f3f;
-  margin-top:103px;
+  width: 97.995%;
+  height: 45px;
+  background-color : #343434;
+  margin-top:95px;
   margin-left :10px;
 }
 
@@ -260,7 +260,7 @@ width : 100%;
       width : 100%;
 display: flex;
   border-radius: 10;
-  overflow : hidden;
+  overflow : auto;
     }
 
 .search-objImg{
@@ -280,7 +280,7 @@ display: block;
       height: 100%;
       border-radius: 10px;
       box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
-      object-fit: cover;
+        /* object-fit: cover;*/
       
 }
         .objImg{
@@ -298,7 +298,7 @@ display: block;
       height: 100%;
       border-radius: 10px;
       box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
-       object-fit: cover;
+     /* object-fit: cover;*/
     }
 
 .predict-row{
@@ -414,6 +414,21 @@ width : 100%;
     font-weight: normal;
     font-style: normal;
 }
+/* 가로 스크롤 바 너비 설정 */
+::-webkit-scrollbar {
+  height: 10px;
+}
+
+/* 가로 스크롤 바 배경색 설정 */
+::-webkit-scrollbar-track {
+  background-color: #FFFFFF;
+}
+
+/* 가로 스크롤 바 슬라이더(스크롤바를 드래그할 때 이동하는 부분) 설정 */
+::-webkit-scrollbar-thumb {
+  background-color: #EEEEEE;
+}
+
  </style>
 
 </head>
@@ -902,7 +917,7 @@ var isSlickInitialized = false;
              success : function(data) {
                  console.log(data)                  
                  var html = "";
-                 for (var i = 0; i < 6; i++) {  
+                 for (var i = 0; i < 5; i++) {  
                      html += '<div class="search-objImg"><a href="' + data['link'][i] + '" target="_blank"><img src="' + data['image'][i] + '"></a></div>';
                  }
                  $(".search-title").show();

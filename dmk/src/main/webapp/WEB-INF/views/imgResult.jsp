@@ -233,7 +233,7 @@ display: block;
       height: 100%;
       border-radius: 10px;
       box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
-      object-fit: cover;s
+       /* object-fit: cover;*/
 }
 
         .objImg{
@@ -252,7 +252,7 @@ margin-right:20px;
       height: 100%;
       border-radius: 10px;
       box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
-       object-fit: cover;
+       /* object-fit: cover;*/
     }
 
 .predict-row{
