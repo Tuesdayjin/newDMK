@@ -65,7 +65,7 @@
 	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
 	rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-S
+
 <!--amalia.js-->
 <script type="text/javascript"
    src="http://localhost:8081/flask/full/bower_components/jquery/dist/jquery.js"></script>

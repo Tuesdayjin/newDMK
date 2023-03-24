@@ -608,7 +608,7 @@ $(document).ready(function(){
 <div class="col-4">
 <div class="save-container">
 <form action="historyInsert.do">
-<input type="hidden" name="h_kind" value="비디오">
+<input type="hidden" name="h_kind" value="이미지">
 <input type="hidden" name="h_value" value="${fileName}">
   <input type="text" name="h_comment" value="" placeholder="코멘트를 남겨주세요" required>
   <button class="savefilename-btn" type="submit">
@@ -665,7 +665,7 @@ $(document).ready(function(){
              success : function(data) {
                  console.log(data)                  
                  var html = "";
-                 for (var i = 0; i < 6; i++) {  
+                 for (var i = 0; i < 5; i++) {  
                      html += '<div class="search-objImg"><a href="' + data['link'][i] + '" target="_blank"><img src="' + data['image'][i] + '"></a></div>';
                  }
                  $(".search-title").show();
