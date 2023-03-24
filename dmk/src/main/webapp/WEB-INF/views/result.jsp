@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+   pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
@@ -18,86 +18,77 @@
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Dramarket</title>
 <!-- Bootstrap 및 Bootswatch 스타일시트 파일 -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css" integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+" crossorigin="anonymous">
-
-    <!--google font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-    <!-- Bootstrap Icons library -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css" integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+" crossorigin="anonymous">
+<!-- Bootstrap 및 Bootswatch 자바스크립트 파일 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!--bootstrap-->
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
+    <script type="text/javascript" src="${cpath}/resources/js/dmk.js"></script>
     <link rel="stylesheet" href="${cpath}/resources/css/font.css">
-    
-    <!-- Slick CSS -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="js/morph/bootstrap.min.js"></script>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+ <!-- Bootstrap Icons library -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+ <title>Dramarket</title>
 
-    <!-- Bootstrap 및 Bootswatch 자바스크립트 파일 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<!-- Bootstrap 및 Bootswatch 스타일시트 파일 -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootswatch/4.6.0/morph/bootstrap.min.css"
+	integrity="sha384-8QLqx+yb7DgYaFvzV7Ku8Hq3eIYXPHfgvKfZKH4NoJ+dsSdRfR5aIWlFJTG8xV7+"
+	crossorigin="anonymous">
+<!-- Bootstrap 및 Bootswatch 자바스크립트 파일 -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+	integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+	integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+	crossorigin="anonymous"></script>
+<script
+	src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+	integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+	crossorigin="anonymous"></script>
+<!--bootstrap-->
+<link rel="stylesheet" href="${cpath}/resources/css/style.css">
+<script type="text/javascript" src="${cpath}/resources/js/dmk.js"></script>
+<script src="js/morph/bootstrap.min.js"></script>
+<!--google font-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+	href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+S
 <!--amalia.js-->
 <script type="text/javascript"
-	src="http://localhost:8081/flask/full/bower_components/jquery/dist/jquery.js"></script>
+   src="http://localhost:8081/flask/full/bower_components/jquery/dist/jquery.js"></script>
 <script type="text/javascript"
-	src="http://localhost:8081/flask/full/bower_components/jquery-ui/jquery-ui.min.js"></script>
+   src="http://localhost:8081/flask/full/bower_components/jquery-ui/jquery-ui.min.js"></script>
 <script type="text/javascript"
-	src="http://localhost:8081/flask/full/bower_components/raphael/raphael.js"></script>
+   src="http://localhost:8081/flask/full/bower_components/raphael/raphael.js"></script>
 <link
-	href="http://localhost:8081/flask/full/build/css/amalia.js.min.css"
-	type="text/css" rel="stylesheet" />
+   href="http://localhost:8081/flask/full/build/css/amalia.js.min.css"
+   type="text/css" rel="stylesheet" />
 <script src="http://localhost:8081/flask/full/build/js/amalia.js.min.js"
-	type="text/javascript"></script>
+   type="text/javascript"></script>
 <script type="text/javascript"
-	src="http://localhost:8081/flask/full/build/js/amalia.js-plugin-timeline.min.js"></script>
+   src="http://localhost:8081/flask/full/build/js/amalia.js-plugin-timeline.min.js"></script>
 <script type="text/javascript"
-	src="http://localhost:8081/flask/full/build/js/i18n/amalia.js-message-en.js"></script>
+   src="http://localhost:8081/flask/full/build/js/i18n/amalia.js-message-en.js"></script>
 
-<!-- Slick JS -->
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>	
-	
+<!--슬릭 슬라이더-->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 <style>
-.slider-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.slider-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  white-space: nowrap;
-}
-
-.slider-wrapper img {
-  display: inline-block;
-  height: 100%;
-  margin-right: 10px;
-}
-
-.prev-btn,
-.next-btn {
-  position: absolute;
-  top: 80%;
-    width: 1px;
-  height: 1px;
-  cursor: pointer;
-}
-
-.prev-btn {
-  left: 48%;
-}
-
-.next-btn {
-  right: 48%;
-}
-
 .save-container {
   position: relative;
   display: flex;
@@ -187,7 +178,7 @@ border-radius: 5px;
   height: 25px;
   stroke-width: 5px; /* 아이콘의 선 굵기를 조절합니다. */
 }
-	        .content {
+           .content {
             display: flex;
             justify-content: center;
              align-items: center;
@@ -195,35 +186,35 @@ border-radius: 5px;
         }
         .player-Bigbox{
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-        	margin-top : 40px;
-        	border-radius: 5px;
-        		width : 80%;
-	height : auto; 	
+           margin-top : 40px;
+           border-radius: 5px;
+              width : 80%;
+   height : auto;    
         }
-	.player-box{
+   .player-box{
 width : 100%;
-	height : auto;
-	background-color : #EEEEEE;
-	border-top-left-radius: 5px;
+   height : auto;
+   background-color : #EEEEEE;
+   border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     padding : 10px;
     padding-bottom : 0px;
-	}
-	.timeline-box{
-	position: relative;
-	width : 100%;
-	height : auto;
-	background-color : #EEEEEE;
-	border-bottom-left-radius: 5px;
+   }
+   .timeline-box{
+   position: relative;
+   width : 100%;
+   height : auto;
+   background-color : #EEEEEE;
+   border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
     padding : 10px;
     padding-top : 0px;
-	}
-	
-	#timeline{
-	position: relative;
-	}
-	.cover {
+   }
+   
+   #timeline{
+   position: relative;
+   }
+   .cover {
   position: absolute;
   top: 0;
   left: 0;
@@ -239,44 +230,45 @@ margin-bottom:50px;
 }
  .predict-Bigbox{
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-        	margin-top : 50px;
-        		width : 80%;
-	height : auto; 	
-	border-radius: 5px;
+           margin-top : 50px;
+              width : 80%;
+   height : auto;    
+   border-radius: 5px;
         }
-	.predictTitle-box{
+   .predictTitle-box{
 width : 100%;
-	height : auto;
-	}	
-	.predict-title h3{
-	color:#393E46;
-	margin-left:40px;
-	margin-top:40px;
-	}
-	
-	.predict-title p{
-	color : rgb(57, 62, 70,0.5);
-	margin-left:40px;
-	}
-	.predictObj-box{
-	width : 100%;
-	height : auto;
-	}
+   height : auto;
+   }   
+   .predict-title h3{
+   color:#393E46;
+   margin-left:40px;
+   margin-top:40px;
+   }
+   
+   .predict-title p{
+   color : rgb(57, 62, 70,0.5);
+   margin-left:40px;
+   }
+   .predictObj-box{
+   width : 100%;
+   height : auto;
+   }
 
-	   .predict-card{
-	   position: relative;
-	   margin-top : 20px;
-	   width : 100%;
+      .predict-card{
+      position: relative;
+      margin-top : 20px;
+      width : 100%;
 display: flex;
   border-radius: 10;
-  /*overflow : hidden;*/
+  overflow : hidden;
     }
 
 .search-objImg{
 display: inline-block;
 vertical-align: top;
-margin-left:40px;
-      	margin-bottom:40px;  
+margin-left:20px;
+margin-right:20px;
+         margin-bottom:40px;  
       flex: 0 0 auto;
       padding: 20px;
       width: 200px;
@@ -293,7 +285,7 @@ display: block;
 }
         .objImg{
 margin-left:40px;
-      	margin-bottom:40px;  
+         margin-bottom:40px;  
       flex: 0 0 auto;
       padding: 20px;
       width: 200px;
@@ -440,232 +432,250 @@ for(int i=0; i<json_time.size(); i++) {
     }
 File[] topDir = new File[nameArr.length];
 for(int i=0; i<nameArr.length; i++) {
-	String topPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\top";
+   String topPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\top";
     topDir[i] = new File(topPath);
 }
 File[] bottomDir = new File[nameArr.length];
 for(int i=0; i<nameArr.length; i++) {
-	String bottomPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\bottom";
+   String bottomPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\bottom";
     bottomDir[i] = new File(bottomPath);
 }
 File[] dressDir = new File[nameArr.length];
 for(int i=0; i<nameArr.length; i++) {
-	String dressPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\dress";
+   String dressPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\dress";
     dressDir[i] = new File(dressPath);
 }
 File[] bagDir = new File[nameArr.length];
 for(int i=0; i<nameArr.length; i++) {
-	String bagPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\bag";
+   String bagPath = "C:\\dmkServer\\yolov5\\runs\\detect\\" + request.getAttribute("fileName") + "\\" + nameArr[i].split("\\.")[0] + "\\crops\\bag";
     bagDir[i] = new File(bagPath);
 }%>
 
-	<button onclick="topFunction()" id="myBtn" class="btn btn-info to-top"
-		title="Go to top">TOP</button>
-		
-	<div
-		style="background-color: #222831; position: sticky; top: 0; z-index: 9999;">
-		<nav class="navbar navbar-expand-lg">
-			<div class="container-fluid" style="width: 70%;">
-				<a class="navbar-brand" href="Main.do" style="color: #FFD369;">
+   <button onclick="topFunction()" id="myBtn" class="btn btn-info to-top"
+      title="Go to top">TOP</button>
+      
+   <div
+      style="background-color: #222831; position: sticky; top: 0; z-index: 9999;">
+      <nav class="navbar navbar-expand-lg">
+         <div class="container-fluid" style="width: 70%;">
+            <a class="navbar-brand" href="Main.do" style="color: #FFD369;">
                <span  style="font-size:23px; font-family: 'Cafe24Danjunghae';">DRAMARKET</span>
-				<img src="${cpath}/resources/img/dmkimg/dmksim.png"width="20" height="24" style="margin-left:3px; margin-top:4px;" class="d-inline-block align-text-top">
+            <img src="${cpath}/resources/img/dmkimg/dmksim.png"width="20" height="24" style="margin-left:3px; margin-top:4px;" class="d-inline-block align-text-top">
                   </a>
-				<div class="d-flex justify-content-end">
-					<button class="navbar-toggler" type="button"
-						data-bs-toggle="collapse" data-bs-target="#navbarColor02"
-						aria-controls="navbarColor02" aria-expanded="false"
-						aria-label="Toggle navigation">
-						<span class="navbar-toggler-icon"></span>
-					</button>
-					<div class="collapse navbar-collapse" id="navbarColor02">
+            <div class="d-flex justify-content-end">
+               <button class="navbar-toggler" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#navbarColor02"
+                  aria-controls="navbarColor02" aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarColor02">
 
 
-						<ul class="navbar-nav me-auto">
-							<li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Home
-									<span class="visually-hidden">(current)</span>
-							</a></li>
-							<li class="nav-item"><a class="nav-link" href="boardList.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Board</a>
-							</li>
-							<c:if test="${!empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="myPage.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
-								</li>
-								<li class="nav-item"><a class="nav-link" href="logout.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
-								</li>
-							</c:if>
-							<c:if test="${empty mvo}">
-								<li class="nav-item"><a class="nav-link" href="login.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Login</a>
-								</li>
-							</c:if>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</nav>
-	</div>
+                  <ul class="navbar-nav me-auto">
+                     <li class="nav-item"><a class="nav-link " href="Main.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Home
+                           <span class="visually-hidden">(current)</span>
+                     </a></li>
+                     <li class="nav-item"><a class="nav-link" href="boardList.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Board</a>
+                     </li>
+                     <c:if test="${!empty mvo}">
+                        <li class="nav-item"><a class="nav-link" href="myPage.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">MyPage</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="logout.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Logout</a>
+                        </li>
+                     </c:if>
+                     <c:if test="${empty mvo}">
+                        <li class="nav-item"><a class="nav-link" href="login.do" style="font-size:15px; font-family: 'GmarketSans'; font-weight: 300;">Login</a>
+                        </li>
+                     </c:if>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </nav>
+   </div>
 
 <div class="container">
-		<div class="header">
-		</div>
-<form id="captureForm" action="imgPredict.do" method="post" enctype="multipart/form-data">		
-<input type="hidden" name="captureFile" id="captureFile" value="">		
+      <div class="header">
+      </div>
+                  <!-- 캡쳐버튼 로그인 검증  <c:if test="${!empty mvo}">  
+            </c:if>  -->
+            
+<form id="captureForm" action="imgPredict.do" method="post" enctype="multipart/form-data">      
+<input type="hidden" name="captureFile" id="captureFile" value="">      
 <button id="captureImageButton" class="btn" type="button" title="재생 중인 장면을 추가 분석!"  data-bs-toggle="tooltip" >
-				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-camera" viewBox="0 0 16 16">
   <path d="M15 12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h1.172a3 3 0 0 0 2.12-.879l.83-.828A1 1 0 0 1 6.827 3h2.344a1 1 0 0 1 .707.293l.828.828A3 3 0 0 0 12.828 5H14a1 1 0 0 1 1 1v6zM2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2z"/>
   <path d="M8 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm0 1a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7zM3 6.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
 </svg>
 </button>
 </form>
 
-		<div class="content">
-				<div class="player-Bigbox">
-				<div class="player-box">
-					<div id="player"></div>
-				</div>
-				<div class="timeline-box">
-				<div id="timeline"></div>
-				<div class="cover"></div>
-				</div>
-				</div>
+      <div class="content">
+            <div class="player-Bigbox">
+            <div class="player-box">
+               <div id="player"></div>
+            </div>
+            <div class="timeline-box">
+            <div id="timeline"></div>
+            <div class="cover"></div>
+            </div>
+            </div>
+            <!--영상현재시간출력<div id="currentTimeDisplay"></div>-->
 </div>
 </div>
-			
+         
 
-				<script>
-				var player = null;
-					$(function() {
-						$("#player")
-								.mediaPlayer(
-										{
-											autoplay : false,
-											src : "http://localhost:8081/flask/upload/${fileName}.mp4",
-											 callbacks: {
-									                onReady: 'onReady'
-									            },
-											controlBar : {
-												sticky : true
-											},
+            <script>
+            var player = null;
+               $(function() {
+                    
+                  $("#player")
+                        .mediaPlayer(
+                              {
+                                 autoplay : false,
+                                 src : "http://localhost:8081/flask/upload/${fileName}.mp4",
+                                  callbacks: {
+                                           onReady: 'onReady'
+                                       },
+                                 controlBar : {
+                                    sticky : true
+                                 },
 
-											plugins : {
-												dataServices : [
-												'http://localhost:8081/flask/pyscene/result/${fileName}.json'
-												],
-												list : [ {
-													'className' : 'fr.ina.amalia.player.plugins.TimelinePlugin',
-													'container' : '#timeline',
-													'parameters' : {
-														timeaxis : false,
-														listOfLines : [
-														{
-															title : 'AI가 분석한 상품이 있는 장면입니다',
-															type : 'image',
-															metadataId : '${fileName}',
-															pointNav : true,
-															showToolsbar : false
-															
-														} ]
-													}
-												} ]
-											}
-										});
-					});
-					//영상 재생 시간 받기
-					function onReady() {
-				        player = $('#player').data('fr.ina.amalia.player').getPlayer();
-				        //이벤트리스너 시간바꾸기
-				        $('#player').on('fr.ina.amalia.player.PlayerEventType.TIME_CHANGE', onTimeChange);
-				    }
-					
-					function playVideo() {
-				        if (player !== null) {
-				            player.play();
-				        }
-				    }
-					function onTimeChange(event, data) {
-						  var currentTime = player.getCurrentTime();
+                                 plugins : {
+                                    dataServices : [
 
-						  <%for(int i=0; i<nameArr.length; i++) {%>
-						  
-						  var start_time<%=i%> = $('.start_time<%=i%>').val();
-						  var end_time<%=i%> = $('.end_time<%=i%>').val();
-						  
-						  if (currentTime >= start_time<%=i%> && currentTime < end_time<%=i%>) {
-							  $('.predict_content<%=i%>').removeAttr('style');
-						  }else {
-							  $('.predict_content<%=i%>').attr('style','display:none');
-						  }
-						  <%}%>
-						  
-						  console.log('Current playback time:', currentTime);
-						// 현재 재생 시간을 div에 출력
-						//$("#currentTimeDisplay").text("Current playback time: " + currentTime);
+                                    'http://localhost:8081/flask/pyscene/result/${fileName}.json'
 
-						}
-					//캡쳐버튼 클릭
-					document.addEventListener('DOMContentLoaded', function() {
-						  $('#captureImageButton').click(captureImage);
-						
-						});
-					function captureImage() {						
-						//비디오 플레이어를 불러오기
-						  var videoElement = $('video', '#player')[0];
-						  var canvas = document.createElement('canvas');
-						  canvas.width = videoElement.videoWidth;
-						  canvas.height = videoElement.videoHeight;
-						  //비디오 위에 공간 잡기
-						  var ctx = canvas.getContext('2d');
-						  ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
-						  //지금 이미지의 주소 잡기
-						  var imageDataUrl = canvas.toDataURL('image/png');
-						  console.log('캡쳐이미지 : '+ imageDataUrl);
-						  var file = base64toFile(imageDataUrl,'jangho.png');
+                                    ],
+                                    list : [ {
+                                       'className' : 'fr.ina.amalia.player.plugins.TimelinePlugin',
+                                       'container' : '#timeline',
+                                       'parameters' : {
+                                          timeaxis : false,
+                                          listOfLines : [
+                                          {
+                                             title : 'AI가 분석한 상품이 있는 장면입니다',
+                                             type : 'image',
+                                             metadataId : '${fileName}',
+                                             pointNav : true,
+                                             showToolsbar : false
+                                             
+                                          } ]
+                                       }
+                                    } ]
+                                 }
+                              });
+               });
+               //영상 재생 시간 받기
+               
+             
+               function onReady() {
+                    player = $('#player').data('fr.ina.amalia.player').getPlayer();
+                    // Set event listener on time change.
+                    $('#player').on('fr.ina.amalia.player.PlayerEventType.TIME_CHANGE', onTimeChange);
+                }
+               
+               function playVideo() {
+                    if (player !== null) {
+                        player.play();
+                    }
+                }
+               function onTimeChange(event, data) {
+                    var currentTime = player.getCurrentTime();
 
-						  var formData=new FormData();
-						  formData.append("file",file );
+                    <%for(int i=0; i<nameArr.length; i++) {%>
+                    
+                    var start_time<%=i%> = $('.start_time<%=i%>').val();
+                    var end_time<%=i%> = $('.end_time<%=i%>').val();
+                    
+                    if (currentTime >= start_time<%=i%> && currentTime < end_time<%=i%>) {
+                       $('.predict_content<%=i%>').removeAttr('style');
+                    }else {
+                       $('.predict_content<%=i%>').attr('style','display:none');
+                    }
+                    <%}%>
+                    
+                    console.log('Current playback time:', currentTime);
+                    
+                  // 현재 재생 시간을 div에 출력
+                  //$("#currentTimeDisplay").text("Current playback time: " + currentTime);
+                  
 
-						    $.ajax({
-							      url: "captureUpload.do",
-							      type: "POST",
-							      data: formData,
-							      processData: false,
-							      contentType: false,
-							      success: function(data) {
-							    	 console.log(JSON.stringify(data));
-							    	//$('#imgdiv').append('<img src="http://localhost:8081/boardimg/'+ data +'" id="Sample">');
-							        $('#captureFile').val(data);
-							        $('#captureForm').submit();
-							      },
-							      error : function(){alert("파일 업로드에 실패하였습니다");}
-							    });
-					}
-	      
-	               // base64 이미지 -> File 객체로 변환하는 함수
-	                  function base64toFile(base_data, filename) {
-	                      var arr = base_data.split(','),
-	                          mime = arr[0].match(/:(.*?);/)[1],
-	                          bstr = atob(arr[1]),
-	                          n = bstr.length,
-	                          u8arr = new Uint8Array(n);
-	                      while(n--){
-	                          u8arr[n] = bstr.charCodeAt(n);
-	                      }
-	                      return new File([u8arr], filename, {type:mime});
-	                  }
+                  }
+               //캡쳐버튼 클릭
+               document.addEventListener('DOMContentLoaded', function() {
+                    $('#captureImageButton').click(captureImage);
+                  
+                  });
+               function captureImage() {                  
+                  
+                  //비디오 플레이어를 불러오기
+                    var videoElement = $('video', '#player')[0];
+                    var canvas = document.createElement('canvas');
+                    canvas.width = videoElement.videoWidth;
+                    canvas.height = videoElement.videoHeight;
 
-				</script>
+                    //비디오 위에 공간 잡기
+                    var ctx = canvas.getContext('2d');
+                    ctx.drawImage(videoElement, 0, 0, canvas.width, canvas.height);
+
+                    //지금 이미지의 주소 잡기
+                    var imageDataUrl = canvas.toDataURL('image/png');
+                    console.log('캡쳐이미지 : '+ imageDataUrl);
+                    var file = base64toFile(imageDataUrl,'jangho.png');
+
+                    var formData=new FormData();
+                    formData.append("file",file );
+                    
+
+                    
+                      $.ajax({
+                           url: "captureUpload.do",
+                           type: "POST",
+                           data: formData,
+                           processData: false,
+                           contentType: false,
+                           success: function(data) {
+                             console.log(JSON.stringify(data));
+                            //$('#imgdiv').append('<img src="http://localhost:8081/boardimg/'+ data +'" id="Sample">');
+                             $('#captureFile').val(data);
+                             $('#captureForm').submit();
+                          
+                           },
+                           error : function(){alert("파일 업로드에 실패하였습니다");}
+                         });
+                    
+               }
+         
+                  // base64 이미지 -> File 객체로 변환하는 함수
+                     function base64toFile(base_data, filename) {
+                         var arr = base_data.split(','),
+                             mime = arr[0].match(/:(.*?);/)[1],
+                             bstr = atob(arr[1]),
+                             n = bstr.length,
+                             u8arr = new Uint8Array(n);
+                         while(n--){
+                             u8arr[n] = bstr.charCodeAt(n);
+                         }
+                         return new File([u8arr], filename, {type:mime});
+                     }
+
+            </script>
 <!--인식한 객체 출력-->
 <div class="container predict-container">
-		<div class="content">
-				<div class="predict-Bigbox">
-				<div class="predictTilte-box">
-					<div class="predict-title">
+      <div class="content">
+            <div class="predict-Bigbox">
+            <div class="predictTilte-box">
+               <div class="predict-title">
 <h3>재생 중인 장면 속 상품입니다</h3>
 <p>상세정보를 보려면 이미지를 클릭하세요</p>
 </div>
 
-				</div>
-				<div class="predictObj-box slider-container">
-				<%for(int i=0; i<nameArr.length; i++) {%>
-<div class="predict_content<%=i%> predict-card slider-wrapper"  style="display:none;">
+            </div>
+            <div class="predictObj-box">
+            <%for(int i=0; i<nameArr.length; i++) {%>
+<div id="predict-slick" class="predict_content<%=i%> predict-card"  style="display:none;">
 <%
 try {
     if (topDir[i] != null) {
@@ -743,64 +753,57 @@ try {
 <input type="hidden" class="end_time<%=i%>" value="<%=timeArr[i+1]%>">
 </div><!--end predict card-->
 <%}%>
-        <!--  <div class="row">
-<button class="prev-btn"style="border: none; background-color: transparent;"><i class="bi bi-dot" style="color:rgb(64,64,64); font-size:40px;"></i></button>
-  <button class="next-btn"style="border: none; background-color: transparent;"><i class="bi bi-dot" style="color:rgb(191,191,191); font-size:40px;"></i></button>
-</div> -->
          </div>
       </div><!-- end predict-Bigbox -->
- 
  <script>
- //제이쿼리로 슬라이더 만들기(예측 객체)
-$(function() {
-	var $sliderWrapper = $('.slider-wrapper');
-	var $prevBtn = $('.prev-btn');
-	var $nextBtn = $('.next-btn');
-	var itemWidth = ($sliderWrapper.find('.objImg:first').outerWidth() + 10) * 8;
-	var currentPosition = 0;
-
-	// 자동 슬라이드 기능 추가
-	var autoSlideInterval;
-	if ($sliderWrapper.find('.objImg').length > 4) { // 이미지 개수가 4개 이상인 경우에만 자동 슬라이드 수행
-	  autoSlideInterval = setInterval(function() {
-	    // 다음 이미지로 이동
-	    if (currentPosition > -((itemWidth/2) * ($sliderWrapper.find('.objImg').length / 8 - 1))) {
-	      currentPosition -= itemWidth/2;
-	      $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
-	    }
-	    // 7초 후 이전 이미지로 이동
-	    setTimeout(function() {
-	      if (currentPosition < 0) {
-	        currentPosition += itemWidth/2;
-	        $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
-	      }S
-	    }, 7000);
-	  }, 10000);
-	}
-
-/*   // 이전 이미지들로 이동
-  $prevBtn.on('click', function() {
-    if (currentPosition < 0) {
-      currentPosition += itemWidth;
-      $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
-    }
-  });
-
-  // 다음 이미지들로 이동
-  $nextBtn.on('click', function() {
-    if (currentPosition > -(itemWidth * ($sliderWrapper.find('.objImg').length / 4 - 1))) {
-      currentPosition -= itemWidth;
-      $sliderWrapper.animate({ left: currentPosition + 'px' }, 500);
-    }
-  }); */
+//슬릭
+$(document).ready(function(){
+	$('#predict-slick').slick({
+		  dots: true, //페이지 네비게이션
+		  arrows:true, // next, prev 이동 버튼
+		  autoplay:true, // 자동 넘김 여부
+		  infinite: true, //반복설정
+		  speed: 300, //슬라이드 속도
+		  autoplaySpeed : 10000,   // 자동 넘김시 슬라이드 시간
+		  pauseOnHover : true,// 마우스 hover시 슬라이드 멈춤
+		  vertical : false,  // 세로 방향 슬라이드 옵션
+		  slidesToShow: 4, //보여질 슬라이드 수
+		  slidesToScroll: 3, //넘겨질 슬라이드 수
+		  responsive: [ // -> 반응형 옵션
+		    {
+		      breakpoint: 1024, // 반응형 ~ 1024
+		      settings: {
+		        slidesToShow: 3,
+		        slidesToScroll: 3,
+		        infinite: true,
+		        dots: true
+		      }
+		    },
+		    {
+		      breakpoint: 600,// 반응형 ~ 600
+		      settings: {
+		        slidesToShow: 2,
+		        slidesToScroll: 2
+		      }
+		    },
+		    {
+		      breakpoint: 480,// 반응형 ~ 480
+		      settings: {
+		        slidesToShow: 1,
+		        slidesToScroll: 1
+		      }
+		    }
+		  ]
+		});
 });
- </script>
- 
+</script>     
+      
+      
  
 <!-- 객체 이미지 검색 -->
 <form method="post" id = "search_form">
-	<input type="hidden" id="search_img" name="img_path" value="">
-	<input type="submit" id="search_btn" style="display:none;">
+   <input type="hidden" id="search_img" name="img_path" value="">
+   <input type="submit" id="search_btn" style="display:none;">
 </form>
 <div class="predict-Bigbox">
     <div class="predictTilte-box">
@@ -860,7 +863,7 @@ $(function() {
 </div><!--end predict-container-->
 
  <script type="text/javascript">
- var isSlickInitialized = false;
+var isSlickInitialized = false;
  
  $(function() {
      $(".objImg img").click(function() {
@@ -905,6 +908,7 @@ $(function() {
                  $(".search-title").show();
                  $(".search-subTitle").show();
                  $('#search').html(html);
+                 $("#saveResult").show();
                  
                  // slick 해제
                  if ($('.search-slick').hasClass('slick-initialized')) {
@@ -981,44 +985,44 @@ $(function() {
   });
   
   
-	//to top button
-	document.addEventListener("DOMContentLoaded", function() {
-		// DOM이 완전히 로드된 후에 스크립트가 실행
-		let mybutton = document.getElementById("myBtn");
+   //to top button
+   document.addEventListener("DOMContentLoaded", function() {
+      // DOM이 완전히 로드된 후에 스크립트가 실행
+      let mybutton = document.getElementById("myBtn");
 
-		window.onscroll = function() {
-			scrollFunction()
-		};
+      window.onscroll = function() {
+         scrollFunction()
+      };
 
-		function scrollFunction() {
-			if (document.body.scrollTop > 20
-				|| document.documentElement.scrollTop > 20) {
-				mybutton.style.display = "block";
-				mybutton.style.backgroundColor = "#FFD369";
-			} else {
-				mybutton.style.display = "none";
-			}
-		}
+      function scrollFunction() {
+         if (document.body.scrollTop > 20
+            || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+            mybutton.style.backgroundColor = "#FFD369";
+         } else {
+            mybutton.style.display = "none";
+         }
+      }
 
 
-	});
+   });
 
-	
-	function topFunction() {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}
+   
+   function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+   }
 
-	
+   
 
 
 </script>
 
  
 
-				</div>
-				</div>	
-				<!-- 로더 모달 -->
+            </div>
+            </div>   
+            <!-- 로더 모달 -->
 <!-- 모달창 -->
 <div class="modal fade" id="loaderModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
@@ -1055,6 +1059,7 @@ $(function() {
     </div>
 </div>
 </footer>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <!-- Bootstrap JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBud7Rdu7Bf4zVdcp4Xh3Pm4LI+J2SvD0oda3x3tvLAuta3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>

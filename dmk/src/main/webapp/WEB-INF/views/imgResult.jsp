@@ -71,6 +71,13 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <style>
+    .slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: auto; /* slick-list 높이 자동 조정 */
+}
 .save-container {
   position: relative;
   display: flex;
@@ -210,13 +217,15 @@ display: flex;
     }
 
 .search-objImg{
-flex: 0 0 auto;
+display: inline-block;
+vertical-align: top;
+margin-left:20px;
+margin-right:20px;
+         margin-bottom:40px;  
+      flex: 0 0 auto;
       padding: 20px;
       width: 200px;
       height: 200px;
-       display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .search-objImg img{
 display: block;
@@ -224,27 +233,26 @@ display: block;
       height: 100%;
       border-radius: 10px;
       box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
-        object-fit: cover;
+      object-fit: cover;s
 }
 
-        .objImg {
+        .objImg{
+margin-left:20px;
+margin-right:20px;
+         margin-bottom:40px;  
       flex: 0 0 auto;
       padding: 20px;
       width: 200px;
       height: 200px;
-       display: flex;
-  justify-content: center;
-  align-items: center;
-
     }
   
     .objImg img {
-      display: block;
+     display: block;
       width: 100%;
       height: 100%;
       border-radius: 10px;
       box-shadow: 5px 5px 10px rgba(55, 94, 148, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.4);
-        object-fit: cover;
+       object-fit: cover;
     }
 
 .predict-row{
@@ -663,6 +671,7 @@ $(document).ready(function(){
                  $(".search-title").show();
                  $(".search-subTitle").show();
                  $('#search').html(html);
+                 $("#saveResult").show();
                  
                  // slick 해제
                  if ($('.search-slick').hasClass('slick-initialized')) {
